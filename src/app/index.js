@@ -5,10 +5,10 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { NavBar } from './components/NavBar.js';
 import { Schedules } from './components/Schedules.js';
 import { Root } from './components/Root.js';
-import { Tournaments } from './components/Tournaments.js'
-import { Gallery } from './components/Gallery.js'
-import { Rankings } from './components/Rankings.js'
-import { Contact } from './components/Contact.js'
+import { Tournaments } from './components/Tournaments.js';
+import { Gallery } from './components/Gallery.js';
+import { Rankings } from './components/Rankings.js';
+import { Contact } from './components/Contact.js';
 
 class App extends React.Component {
   render () {

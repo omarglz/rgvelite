@@ -5,11 +5,9 @@ export class NavBar extends React.Component {
 	render() {
 	    return (
 	    	<div>
-	    		{/* ------------ COMMENTED OUT NAV BAR ----------------*/}
-
 	    		<header className="bg-white black-80 tc pv4 w-100">
 	    		  <div>
-		    		  <img src={"http://tachyons.io/img/logo.jpg"} className="br3 ba b--black-10 h3 w3" />
+		    		  <img src={"http://i.imgur.com/K08Rx4F.png"} className="br3 ba b--black-10 h3 w3" />
 					  <h1 className="mt2 mb0 f3 ttu tracked">RGV Elite Tennis Academy</h1>
 	    		  </div>
 				  <nav className="bt bb tc mw7 center mt4">
@@ -20,7 +18,8 @@ export class NavBar extends React.Component {
 				    <Link to={"/contact"}     className="f6 f5-l link bg-animate black-80 hover-bg-blue hover-white dib pa3 ph4-l">Contact</Link>
 				  </nav>
 				</header>
-							
+
+				{/* ------------ COMMENTED OUT NAV BAR ----------------*/}	
 				{/*<nav className="db dt-l w-100 border-box pa3">
 				  <img src={"http://tachyons.io/img/logo.jpg"} className="db pv2 dtc-l center w-75-l tc tr-l br3 b--black-10 h2 w2" />
 				  <a className="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l f6 f5-l dib" title="Home">

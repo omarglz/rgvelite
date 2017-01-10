@@ -4,7 +4,16 @@ export class Rankings extends React.Component {
 	render() {
 	    return (
 			<div className="mw9 center ph3-ns">
-				<h2 className="tc">Rankings</h2>
+				<h2 className="tc f3 ttu tracked">Rankings</h2>
+
+				<article className="cf">
+				  	<ul className="list ph3 ph5-ns tc">
+					  <li className="dib mr2"><a className="f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green">Challenger</a></li>
+					  <li className="dib mr2"><a className="f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green">Champs</a></li>
+					  <li className="dib mr2"><a className="f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green">Super Champs</a></li>
+					</ul>
+				</article>
+
 				<div className="pa1">
 				  <div className="overflow-auto">
 				    <table className="f6 w-100 mw8 center" cellSpacing="0">
