@@ -1,18 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
-//import { AwesomeComponent } from './components/AwesomeComponent.js';
+import { Provider } from 'react-redux';
+import store from './store.js';
 import { NavBar } from './components/NavBar.js';
 import { Schedules } from './components/Schedules.js';
 import { Root } from './components/Root.js';
-import { Tournaments } from './components/Tournaments.js';
 import { Gallery } from './components/Gallery.js';
-import { Rankings } from './components/Rankings.js';
 import { Contact } from './components/Contact.js';
+import Tournaments from './containers/Tournaments.js';
+import Rankings from './containers/Rankings.js';
+import { createStore } from 'redux';
 
-class App extends React.Component {
-  render () {
-    return (
+render (
+    <Provider store={store}>
     	<Router history={browserHistory}>
     		<Route path={"/"} component={Root}>
     			<IndexRoute component={Schedules} />
@@ -23,8 +24,5 @@ class App extends React.Component {
     			<Route path={"contact"} component={Contact} />
     		</Route>
     	</Router>
-    );
-  }
-}
-
-render(<App/>, window.document.getElementById("app"));
+    </Provider>,
+    window.document.getElementById("app"));
