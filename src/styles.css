@@ -1,0 +1,54 @@
+body {
+	overflow:scroll;
+	font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (max-width: 340px) {
+  .header-font-small { font-size: 18px; } 
+}
+
+@media (max-width: 620px) {
+  .f5-small { font-size: 1rem; } 
+}
+
+#drawer-icon {
+	padding-left: 0;
+}
+
+.list {
+	margin-top: 0;
+}
+
+.mdl-data-table {
+	border-top: 0;
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.mdl-layout__drawer {
+	border-right-width: 0;
+}
+
+.mdl-layout--large-screen-only .mdl-navigation__link:hover {
+	border-bottom: 4px solid #FF4081;
+}
+
+.mdl-layout--large-screen-only .mdl-navigation__link {
+	border-bottom: 4px solid transparent;
+}
+
+.mdl-mini-footer {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.programs-section {
+	background: url('https://www.siennaplantation.com/uploads/images/amenities/Sienna-Amenities-Tennis-Header.jpg') center no-repeat;
+  	background-size: cover;
+}

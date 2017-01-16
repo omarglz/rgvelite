@@ -5,8 +5,9 @@ export class Root extends React.Component {
 	render() {
 	    return (
 			<div>
-				<NavBar />
-				{this.props.children}
+				<NavBar>
+					{this.props.children}
+				</NavBar>
 			</div>
 		);
 	}

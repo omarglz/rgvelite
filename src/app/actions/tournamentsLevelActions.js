@@ -1,6 +1,12 @@
-export function tClickChallengerButton() {
+export function tClickChallenger1DayButton() {
 	return {
-		type: "T_CLICK_CHALLENGER_BUTTON"
+		type: "T_CLICK_CHALLENGER1DAY_BUTTON"
+	};
+}
+
+export function tClickChallenger2DayButton() {
+	return {
+		type: "T_CLICK_CHALLENGER2DAY_BUTTON"
 	};
 }
 

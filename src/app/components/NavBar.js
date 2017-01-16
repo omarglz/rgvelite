@@ -2,39 +2,55 @@ import React from 'react';
 import { Link } from 'react-router';
 
 export class NavBar extends React.Component {
+	hideDrawer() {
+	  var layout = document.querySelector('.mdl-layout');
+	  layout.MaterialLayout.toggleDrawer();
+	}
+
 	render() {
 	    return (
-	    	<div>
-	    		<header className="bg-white black-80 tc pv4 w-100">
-	    		  <div>
-		    		  <img src={"http://i.imgur.com/K08Rx4F.png"} className="br3 ba b--black-10 h3 w3" />
-					  <h1 className="mt2 mb0 f3 ttu tracked">RGV Elite Tennis Academy</h1>
-	    		  </div>
-				  <nav className="bt bb tc mw7 center mt4">
-				    <Link to={"/schedules"}   className="f6 f5-l link bg-animate black-80 hover-bg-blue hover-white dib pa3 ph4-l">Schedules</Link>
-				    <Link to={"/tournaments"} className="f6 f5-l link bg-animate black-80 hover-bg-blue hover-white dib pa3 ph4-l">Tournaments</Link>
-				    <Link to={"/rankings"}    className="f6 f5-l link bg-animate black-80 hover-bg-blue hover-white dib pa3 ph4-l">Rankings</Link>
-				    <Link to={"/gallery"}     className="f6 f5-l link bg-animate black-80 hover-bg-blue hover-white dib pa3 ph4-l">Gallery</Link>
-				    <Link to={"/contact"}     className="f6 f5-l link bg-animate black-80 hover-bg-blue hover-white dib pa3 ph4-l">Contact</Link>
-				  </nav>
-				</header>
-
-				{/* ------------ COMMENTED OUT NAV BAR ----------------*/}	
-				{/*<nav className="db dt-l w-100 border-box pa3">
-				  <img src={"http://tachyons.io/img/logo.jpg"} className="db pv2 dtc-l center w-75-l tc tr-l br3 b--black-10 h2 w2" />
-				  <a className="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l f6 f5-l dib" title="Home">
-				  	RGV Elite Tennis Academy
-				  </a>
-				  <div className="db dtc-l v-mid w-100 w-75-l tc tr-l">
-				    <Link to={"/schedules"}   className="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l">Schedules</Link>
-				    <Link to={"/tournaments"} className="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l">Tournaments</Link>
-				    <Link to={"/Rankings"}    className="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l">Rankings</Link>
-				    <Link to={"/gallery"}     className="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l">Gallery</Link>
-				    <Link to={"/"} className="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l">Contact</Link>
+			<div>
+				<div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+				  <header className="mdl-layout__header">
+				    <div className="mdl-layout__header-row">
+				      <span className="mdl-layout-title header-font-small">RGV Elite Tennis Academy</span>
+				      {/* Add spacer, to align navigation to the right*/}
+				      <div className="mdl-layout-spacer"></div>
+				      {/* Navigation. We hide it in small screens.*/}
+				      <nav className="mdl-navigation mdl-layout--large-screen-only">
+				      	<Link to={"/programs"}   className="mdl-navigation__link">Programs</Link>
+				        <Link to={"/tournaments"} className="mdl-navigation__link">Tournaments</Link>
+								<Link to={"/rankings"}    className="mdl-navigation__link">Rankings</Link>
+				        <Link to={"/gallery"}     className="mdl-navigation__link">Gallery</Link>
+				        <Link to={"/contact-us"}     className="mdl-navigation__link">Contact Us</Link>
+				      </nav>
+				    </div>
+				  </header>
+				  <div className="mdl-layout__drawer">
+				    <span id="drawer-icon" className="mdl-layout-title">
+		          <img src={"http://i.imgur.com/K08Rx4F.png"}/>
+		        </span>
+				    <nav className="mdl-navigation">
+				      <Link to={"/programs"}   onClick={() => this.hideDrawer()} className="mdl-navigation__link">Programs</Link>
+		          <Link to={"/tournaments"} onClick={() => this.hideDrawer()} className="mdl-navigation__link">Tournaments</Link>
+					  	<Link to={"/rankings"}    onClick={() => this.hideDrawer()} className="mdl-navigation__link">Rankings</Link>
+		          <Link to={"/gallery"}     onClick={() => this.hideDrawer()} className="mdl-navigation__link">Gallery</Link>
+		          <Link to={"/contact-us"}     onClick={() => this.hideDrawer()} className="mdl-navigation__link">Contact Us</Link>
+				    </nav>
 				  </div>
-				</nav>
-				*/}
-	    	</div>		
+				  <main className="mdl-layout__content">
+				    <div className="page-content">
+				    	{this.props.children}
+				    </div>
+				    <div className="mdl-layout-spacer"></div>
+				    <footer className="mdl-mini-footer">
+					  <div className="mdl-mini-footer__left-section">
+					    <div className="mdl-logo">© 2017 RGV Elite Tennis Academy</div>
+					  </div>
+					</footer>
+				  </main>
+				</div>
+			</div>
 		);
 	}
 }

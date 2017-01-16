@@ -4,7 +4,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import store from './store.js';
 import { NavBar } from './components/NavBar.js';
-import { Schedules } from './components/Schedules.js';
+import { Programs } from './components/Programs.js';
 import { Root } from './components/Root.js';
 import { Gallery } from './components/Gallery.js';
 import { Contact } from './components/Contact.js';
@@ -16,12 +16,12 @@ render (
     <Provider store={store}>
     	<Router history={browserHistory}>
     		<Route path={"/"} component={Root}>
-    			<IndexRoute component={Schedules} />
-    		   	<Route path={"schedules"} component={Schedules} />
+    			<IndexRoute component={Programs} />
+    		   	<Route path={"programs"} component={Programs} />
     			<Route path={"tournaments"} component={Tournaments} />
     			<Route path={"gallery"} component={Gallery} />
     			<Route path={"rankings"} component={Rankings} />
-    			<Route path={"contact"} component={Contact} />
+    			<Route path={"contact-us"} component={Contact} />
     		</Route>
     	</Router>
     </Provider>,

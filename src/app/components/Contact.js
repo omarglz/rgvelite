@@ -4,7 +4,7 @@ export class Contact extends React.Component {
 	render() {
 	    return (
 			<div className="dt-ns dt--fixed-ns">
-			  <div className="dtc-l tc pv4 bg-dark-green">
+			  <div className="dtc-ns tc pv4 bg-dark-green">
 			    <article className="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
 				  <div className="tc">
 				    <img src={"http://tachyons.io/img/avatar_1.jpg"} className="br-100 h4 w4 dib ba b--black-05 pa2" title="Photo of a kitty staring at you"/>
@@ -13,7 +13,7 @@ export class Contact extends React.Component {
 				  </div>
 				</article>
 			  </div>
-			  <div className="dtc-l tc pv4">
+			  <div className="dtc-ns tc pv4">
 			    <article className="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-100">
 				  <div className="tc">
 				    <img src={"http://tachyons.io/img/avatar_1.jpg"} className="br-100 h4 w4 dib ba b--black-05 pa2" title="Photo of a kitty staring at you"/>
@@ -22,7 +22,7 @@ export class Contact extends React.Component {
 				  </div>
 				</article>
 			  </div>
-			  <div className="dtc-l tc pv4 bg-dark-green">
+			  <div className="dtc-ns tc pv4 bg-dark-green">
 			    <article className="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
 				  <div className="tc">
 				    <img src={"http://tachyons.io/img/avatar_1.jpg"} className="br-100 h4 w4 dib ba b--black-05 pa2" title="Photo of a kitty staring at you"/>

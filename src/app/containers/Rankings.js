@@ -50,33 +50,33 @@ class Rankings extends React.Component {
 		const playersList = filteredPlayers.map( (obj) => {
 			console.log(obj);
 			return (
-				<tr className="stripe-dark" key={obj.id}>
-					<td className="pa3">{obj.name}</td>
-					<td className="pa3">{obj.division}</td>
-					<td className="pa3">{obj["rank position"]}</td>
-					<td className="pa3">{obj["as of"]}</td>
-					<td className="pa3">
-						<a target="_blank" className="db blue underline link hover-green" href={obj.info}>more info</a>			
+				<tr key={obj.id}>
+					<td className="pa3 mdl-data-table__cell--non-numeric">{obj.name}</td>
+					<td className="pa3 mdl-data-table__cell--non-numeric">{obj.division}</td>
+					<td className="pa3 mdl-data-table__cell--non-numeric">{obj["rank position"]}</td>
+					<td className="pa3 mdl-data-table__cell--non-numeric">{obj["as of"]}</td>
+					<td className="pa3 mdl-data-table__cell--non-numeric">
+						<a target="_blank" className="db blue underline link" href={obj.info}>more info</a>			
 					</td>		
 				</tr>
 			);
         })  
 
 	    return (
-			<div className="mw9 center ph3-ns">
+			<div className="mw9 center ph3-ns bg-near-white">
 				<h2 className="tc f3 ttu tracked">Rankings</h2>
 
 				<PillsRankings />
 
-				<div className="pa1">
-				  <div className="overflow-auto">
-				    <table className="f6 w-100 mw8 center" cellSpacing="0">
+				<div className="pa3 pb4 pt0">
+				  <div className="overflow-auto mdl-shadow--4dp bg-white">
+				    <table className="mdl-data-table f6 mw8 center" cellSpacing="0">
 				      <thead>
-				        <tr className="stripe-dark">
-				          <th className="fw6 tl pa3 bg-white">Name</th>
-				          <th className="fw6 tl pa3 bg-white">Division</th>
-				          <th className="fw6 tl pa3 bg-white">Rank Position</th>
-				          <th className="fw6 tl pa3 bg-white">Calculated Date</th>
+				        <tr>
+				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Name</th>
+				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Division</th>
+				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Rank Position</th>
+				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Calculated Date</th>
 				        </tr>
 				      </thead>
 				      <tbody className="lh-copy">

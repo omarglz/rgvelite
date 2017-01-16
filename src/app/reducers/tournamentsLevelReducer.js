@@ -1,95 +1,128 @@
 const tournamentsLevelReducer = (state = {
-    challengerBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-    champsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-    superChampsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-    openBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
+    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent",
+    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent",
+    champsBtn: "mdl-button mdl-js-button mdl-button--accent",
+    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent",
+    openBtn: "mdl-button mdl-js-button mdl-button--accent",
     levelSelected: "none"
 }, action) => {
     switch (action.type) {
-        case "T_CLICK_CHALLENGER_BUTTON":
-            if (state.challengerBtn === "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green") {
+        case "T_CLICK_CHALLENGER1DAY_BUTTON":
+            if (state.challenger1DayBtn === "mdl-button mdl-js-button mdl-button--accent") {
                 state = {
                     ...state,
-                    challengerBtn: "f6 link br-pill ba ph3 pv2 mb2 dib white bg-blue pointer", 
-                    champsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    superChampsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    openBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    levelSelected: "Challenger"
+                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent", 
+                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent", 
+                    champsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    openBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    levelSelected: "Challenger 1-Day"
                 };
             }
             else {
                 state = {
                     ...state,
-                    challengerBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green", 
-                    champsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    superChampsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    openBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
+                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent", 
+                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent", 
+                    champsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    openBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    levelSelected: "none"
+                };
+            }
+            break;
+        case "T_CLICK_CHALLENGER2DAY_BUTTON":
+            if (state.challenger2DayBtn === "mdl-button mdl-js-button mdl-button--accent") {
+                state = {
+                    ...state,
+                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent", 
+                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent", 
+                    champsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    openBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    levelSelected: "Challenger 2-Day"
+                };
+            }
+            else {
+                state = {
+                    ...state,
+                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent", 
+                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent", 
+                    champsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    openBtn: "mdl-button mdl-js-button mdl-button--accent",
                     levelSelected: "none"
                 };
             }
             break;
         case "T_CLICK_CHAMPS_BUTTON":
-            if (state.champsBtn === "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green") {
+            if (state.champsBtn === "mdl-button mdl-js-button mdl-button--accent") {
                 state = {
                     ...state,
-                    challengerBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green", 
-                    champsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib white bg-blue pointer",
-                    superChampsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    openBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
+                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent", 
+                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    champsBtn: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent",
+                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    openBtn: "mdl-button mdl-js-button mdl-button--accent",
                     levelSelected: "Champs"
                 };
             }
             else {
                 state = {
                     ...state,
-                    challengerBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green", 
-                    champsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    superChampsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    openBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
+                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent", 
+                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    champsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    openBtn: "mdl-button mdl-js-button mdl-button--accent",
                     levelSelected: "none"
                 };
             }
             break;
         case "T_CLICK_SUPER_CHAMPS_BUTTON":
-            if (state.superChampsBtn === "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green") {
+            if (state.superChampsBtn === "mdl-button mdl-js-button mdl-button--accent") {
                 state = {
                     ...state,
-                    challengerBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green", 
-                    champsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    superChampsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib white bg-blue pointer",
-                    openBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
+                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent", 
+                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    champsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    superChampsBtn: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent",
+                    openBtn: "mdl-button mdl-js-button mdl-button--accent",
                     levelSelected: "Super Champs"
                 };
             }
             else {
                 state = {
                     ...state,
-                    challengerBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green", 
-                    champsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    superChampsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    openBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
+                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent", 
+                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    champsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    openBtn: "mdl-button mdl-js-button mdl-button--accent",
                     levelSelected: "none"
                 };
             }
             break;
         case "T_CLICK_OPEN_BUTTON":
-            if (state.openBtn === "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green") {
+            if (state.openBtn === "mdl-button mdl-js-button mdl-button--accent") {
                 state = {
                     ...state,
-                    challengerBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green", 
-                    champsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    superChampsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    openBtn: "f6 link br-pill ba ph3 pv2 mb2 dib white bg-blue pointer",
+                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent", 
+                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    champsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    openBtn: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent",
                     levelSelected: "Open"
                 };
             }
             else {
                 state = {
                     ...state,
-                    challengerBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green", 
-                    champsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    superChampsBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
-                    openBtn: "f6 link br-pill ba ph3 pv2 mb2 dib dark-blue pointer hover-green",
+                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent", 
+                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    champsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent",
+                    openBtn: "mdl-button mdl-js-button mdl-button--accent",
                     levelSelected: "none"
                 };
             }
