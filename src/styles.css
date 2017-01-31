@@ -12,16 +12,174 @@ h2 {
   .header-font-small { font-size: 18px; } 
 }
 
-@media (max-width: 620px) {
+@media (max-width: 315px) {
   .f5-small { font-size: 1rem; } 
+  .f6-small { font-size: .875rem; } 
+}
+
+@media (max-width: 550px) {
+  .f5-contact { font-size: 1rem; } 
+}
+
+@media (max-width: 362px) {
+  .pad-small { padding-left: 31px; } 
+}
+
+@media (min-width: 900px) {
+  .right-3-l { right: 4rem; }
+}
+
+.bottom-l {
+	bottom: 6rem;
+}
+
+.shadow-5-ns {
+	box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .4 );
+}
+
+.beginners-orange {
+	color: #F57C00;
+}
+
+.challengers-pink{
+	color: #E91E63;
+}
+
+.elite-green {
+	color: #2D9434;
+}
+
+.bg-beginners-orange {
+	/*4F759A or F57C00*/
+	background-color: #F57C00;
+}
+
+.bg-challengers-pink{
+	background-color: #E91E63;
+}
+
+.bg-elite-green {
+	background-color: #2D9434;
+}
+
+.bg-private-purple {
+	background-color: #802470;
+}
+
+.bg-rankings-table {
+	/*DED6DC OR DDD9CD*/
+	background-color: #DDD9CD;
+}
+
+.bg-tournaments-table {
+	overflow: scroll !important;
+	background-color: #DED1DA;
 }
 
 #drawer-icon {
 	padding-left: 0;
 }
 
+.hcustom {
+	height: 32rem;
+}
+
+.home-title {
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.25), 
+      rgba(0, 0, 0, 0.25)
+    ),
+	url('./images/titlePic.jpg') center no-repeat;
+	background-size: cover;
+} 
+
+.home-programs {
+	background: 
+    linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.45), 
+		rgba(0, 0, 0, 0.45),
+		rgba(0, 0, 0, 0.00),
+		rgba(0, 0, 0, 0.00)
+    ),
+	url('./images/beginners4.jpg') center no-repeat;
+	background-size: cover;
+	height: 500px;
+}
+
+.hot-pink {
+	color: #FF4081;
+}
+
+.hover-hot-pink:hover { 
+	color: #FF4081; 
+}
+
 .list {
 	margin-top: 0;
+}
+
+.link-rankings {
+	color: #6AA4BA;
+}
+
+.custom-link {
+  text-decoration: none;
+  color: #2196F3 !important;
+}
+
+  .custom-link:hover {
+  	text-decoration: underline;
+    /*color: #C2185A !important;*/
+  }
+
+  .custom-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+/*this changes the color for the rankings section buttons*/
+.mdl-button--accent.mdl-button--accent {
+	/*94B6D3 or 989FB1 or C3D9EC*/
+	color: #C3D9EC;
+}
+/*this changes the color for the rankings section buttons*/
+.mdl-button--accent.mdl-button--accent.mdl-button--raised {
+	/*94B6D3 or 989FB1*/
+	color: black;
+	background-color: #C3D9EC;
+}
+
+/*this changes the color for the tournaments section level buttons*/
+.mdl-button--accent-custom.mdl-button--accent-custom {
+	/*FD2228 OR 8DB3E8 or FF5722*/
+	color: #FF5722;
+}
+/*this changes the color for the tournaments section level buttons*/
+.mdl-button--accent-custom.mdl-button--accent-custom.mdl-button--raised {
+	color: black;
+	background-color: #FF5722;
+}
+
+/*this changes the color for the tournaments section month buttons*/
+.mdl-button--accent-custom2.mdl-button--accent-custom2 {
+	color: #80A129;
+}
+/*this changes the color for the tournaments section month buttons*/
+.mdl-button--accent-custom2.mdl-button--accent-custom2.mdl-button--raised {
+	color: black;
+	background-color: #80A129;
+}
+
+/*back to top buttons*/
+.mdl-button--fab.mdl-button--colored-custom {
+	background: #CAF973;
+}
+.mdl-button--fab.mdl-button--colored-custom-rankings {
+	color: white;
+	background: #C2185A;
 }
 
 .mdl-data-table {
@@ -33,22 +191,118 @@ h2 {
 
 .mdl-layout__drawer {
 	border-right-width: 0;
+	background-color: #1976D2;
+    opacity: .9;
+    position: fixed;
+    width: 100%;
+    transition-property: transform;
+    transform: translateX(-100%);
+}
+
+.mdl-layout__drawer .mdl-navigation {
+	padding-top: 0px;
+}
+
+.mdl-layout__header {
+	background-color: #1976D2;
+}
+
+.mdl-layout-title {
+	font-weight: 300;
+}
+
+.mdl-layout--large-screen-only .mdl-navigation__link {
+	border-bottom: 4px solid transparent;
+	font-weight: 300;
 }
 
 .mdl-layout--large-screen-only .mdl-navigation__link:hover {
 	border-bottom: 4px solid #FF4081;
 }
 
-.mdl-layout--large-screen-only .mdl-navigation__link {
-	border-bottom: 4px solid transparent;
-}
-
 .mdl-mini-footer {
 	padding-top: 16px;
 	padding-bottom: 16px;
+	padding-right: 0px;
+    display: table;
+    width: 100%;
+}
+
+.prim-text {
+	color: #212121;
+	font-weight: 300;
 }
 
 .programs-section {
-	background: url('https://www.siennaplantation.com/uploads/images/amenities/Sienna-Amenities-Tennis-Header.jpg') center no-repeat;
-  	background-size: cover;
+	overflow:scroll !important;
+}
+
+.programs-title {
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),
+	url('./images/elite4.jpg') center no-repeat;
+	background-size: cover;
+}
+
+.rankings-section {
+	overflow:scroll !important;
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.40), 
+      rgba(0, 0, 0, 0.40)
+    ),
+	url('./images/tennis-ball2.jpg') center no-repeat;
+	background-size: cover;
+}
+
+.sec-text {
+	color: #757575;
+	font-weight: 300;
+}
+
+.scroll-component {
+	position: fixed;
+	bottom: 50px; 
+	right: 30px; 
+	cursor: pointer; 
+	transition: opacity 0.2s linear 0s, visibility;
+	opacity: 0; 
+	visibility: visible;
+	z-index: 500;
+}
+
+.tournaments-section {
+	overflow:scroll !important;
+	background: 
+	linear-gradient(
+      rgba(0, 0, 0, 0.9), 
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.1)
+	),
+	url('./images/tennis-court3.jpg') center no-repeat;
+	background-size: cover;
+}
+
+/*FOR FULLSCREEN EXPERIENCE*/
+.mdl-layout {
+    overflow: visible;
+}
+
+.mdl-layout__content {
+    display: block;
+    overflow: visible;
+    margin-top: 64px;
+}
+
+.is-small-screen .mdl-layout__content {
+    margin-top: 56px;
+}
+.mdl-layout__header {
+    position: fixed;
+}
+.mdl-layout__obfuscator {
+    position: fixed;
 }

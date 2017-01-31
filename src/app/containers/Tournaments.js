@@ -12,12 +12,17 @@ class Tournaments extends React.Component {
 	} 
 	componentDidMount() {
 		// read all tournaments from firebase
-		var tournamentsRef = firebaseApp.ref().child('tournaments');
+		var database = firebaseApp.database();
+		var tournamentsRef = database.ref().child('tournaments');
 		tournamentsRef.once('value', snap => {
 			this.setState({
 				tournaments: snap.val()
 			});
 		});
+	}
+
+	componentDidUpdate() {
+	    componentHandler.upgradeDom();
 	}
 
 	render() {
@@ -64,15 +69,14 @@ class Tournaments extends React.Component {
 		}
 
 		const tournList = filteredTournaments.map( (obj) => {
-			console.log(obj);
 			return (
 				<tr key={obj.id}>
-					<td className="pa3 mdl-data-table__cell--non-numeric">{obj.level}</td>
-					<td className="pa3 mdl-data-table__cell--non-numeric">{obj.name}</td>
-					<td className="pa3 mdl-data-table__cell--non-numeric">{obj.city}</td>
-					<td className="pa3 mdl-data-table__cell--non-numeric">{obj.date}</td>
-					<td className="pa3 red mdl-data-table__cell--non-numeric">{obj["sign up"]}</td>
-					<td className="pa3 mdl-data-table__cell--non-numeric">
+					<td className="pa3 bb b--light-silver">{obj.level}</td>
+					<td className="pa3 bb b--light-silver">{obj.name}</td>
+					<td className="pa3 bb b--light-silver">{obj.city}</td>
+					<td className="pa3 bb b--light-silver">{obj.date}</td>
+					<td className="pa3 red bb b--light-silver">{obj["sign up"]}</td>
+					<td className="pa3 bb b--light-silver">
 						<a target="_blank" className="db blue underline link" href={obj.link}>link to tournament</a>			
 					</td>		
 				</tr>
@@ -80,22 +84,22 @@ class Tournaments extends React.Component {
         })  
 
 	    return (
-			<div className="mw9 center ph3-ns bg-near-white">
-				<h2 className="tc f3 ttu tracked">Tournaments 2017</h2>
+			<div id={"top"} className="mw9 center tournaments-section">
+				<h2 className="tc f3 fw3 bg-white o-90 hot-pink">Tournaments 2017</h2>
 				
 				<PillsTournaments />
-
-				<div className="pa3 pb4 pt0">
-				  <div className="overflow-auto mdl-shadow--4dp bg-white">
-				    <table className="mdl-data-table f6 mw8 center" cellSpacing="0">
+				
+				<div className="ph4 pb4 pt0 relative">
+				  <div className="overflow-auto shadow-3 bg-tournaments-table br2 mw7 hcustom center">
+				    <table className="f6 mw8 center" cellSpacing="0">
 				      <thead>
 				    	<tr>
-				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Level</th>
-				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Name</th>
-				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">City</th>
-				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Start Date</th>
-				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Sign Up By</th>
-						  <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Link</th>
+				          <th className="bb fw6 tl pa3">Level</th>
+				          <th className="bb fw6 tl pa3">Name</th>
+				          <th className="bb fw6 tl pa3">City</th>
+				          <th className="bb fw6 tl pa3">Date</th>
+				          <th className="bb fw6 tl pa3">Deadline</th>
+						  <th className="bb fw6 tl pa3">Link</th>
 				        </tr>
 				      </thead>
 				      <tbody className="lh-copy">

@@ -13,13 +13,18 @@ class Rankings extends React.Component {
 	componentDidMount() {
 		// read all tournaments from firebase
 		var dummyList = [];
-		var rankingsRef = firebaseApp.ref('rankings/');
+		var database = firebaseApp.database();
+		var rankingsRef = database.ref('rankings/');
 		rankingsRef.orderByChild("rank position").on("child_added", snap => {
 		    dummyList.push(snap.val());
 			this.setState({
 				players: dummyList
 			});
 		});
+	}
+
+	componentDidUpdate() {
+	    componentHandler.upgradeDom();
 	}
 
 	render() {
@@ -48,35 +53,34 @@ class Rankings extends React.Component {
 
 		
 		const playersList = filteredPlayers.map( (obj) => {
-			console.log(obj);
 			return (
 				<tr key={obj.id}>
-					<td className="pa3 mdl-data-table__cell--non-numeric">{obj.name}</td>
-					<td className="pa3 mdl-data-table__cell--non-numeric">{obj.division}</td>
-					<td className="pa3 mdl-data-table__cell--non-numeric">{obj["rank position"]}</td>
-					<td className="pa3 mdl-data-table__cell--non-numeric">{obj["as of"]}</td>
-					<td className="pa3 mdl-data-table__cell--non-numeric">
-						<a target="_blank" className="db blue underline link" href={obj.info}>more info</a>			
+					<td className="pa3 bb">{obj.name}</td>
+					<td className="pa3 bb">{obj.division}</td>
+					<td className="pa3 bb">{obj["rank position"]}</td>
+					<td className="pa3 bb">{obj["as of"]}</td>
+					<td className="pa3 bb">
+						<a target="_blank" className="db link-rankings underline link" href={obj.info}>more info</a>			
 					</td>		
 				</tr>
 			);
         })  
 
 	    return (
-			<div className="mw9 center ph3-ns bg-near-white">
-				<h2 className="tc f3 ttu tracked">Rankings</h2>
+			<div id={"top"} className="mw9 center rankings-section">
+				<h2 className="tc f3 fw3 bg-white o-90 hot-pink">Rankings</h2>
 
 				<PillsRankings />
 
-				<div className="pa3 pb4 pt0">
-				  <div className="overflow-auto mdl-shadow--4dp bg-white">
-				    <table className="mdl-data-table f6 mw8 center" cellSpacing="0">
+				<div className="ph4 pb4 pt0">
+				  <div className="overflow-auto shadow-3 bg-rankings-table br2 mw7 hcustom center">
+				    <table className="f6 mw8 center" cellSpacing="0">
 				      <thead>
 				        <tr>
-				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Name</th>
-				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Division</th>
-				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Rank Position</th>
-				          <th className="bb fw6 tl pa3 mdl-data-table__cell--non-numeric">Calculated Date</th>
+				          <th className="bb fw6 tl pa3">Name</th>
+				          <th className="bb fw6 tl pa3">Division</th>
+				          <th className="bb fw6 tl pa3">Rank Position</th>
+				          <th className="bb fw6 tl pa3">Calculated Date</th>
 				        </tr>
 				      </thead>
 				      <tbody className="lh-copy">

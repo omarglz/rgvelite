@@ -1,35 +1,114 @@
 import React from 'react';
+import firebaseApp from '../firebase.js';
+// import { Modal } from 'react-bootstrap';
 
 export class Gallery extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      url: "",
+      show: false,
+      galleryCol1Urls: [],
+      galleryCol2Urls: [],
+      galleryCol3Urls: []
+    };
+  } 
+
+  componentDidMount() {
+    // read all tournaments from firebase
+    console.log('componentDidMount');
+    var database = firebaseApp.database();
+    var galleryCol1 = database.ref().child('gallery-col1');
+    var galleryCol2 = database.ref().child('gallery-col2');
+    var galleryCol3 = database.ref().child('gallery-col3');
+
+    var col1Urls = [];
+    galleryCol1.once('value', snap => {
+        snap.val().map( (obj) => {
+            col1Urls.push(obj.url);
+        });    
+        this.setState({
+            galleryCol1Urls: col1Urls
+        });
+    });
+
+    var col2Urls = [];
+    galleryCol2.once('value', snap => {
+        snap.val().map( (obj) => {
+            col2Urls.push(obj.url);
+        });    
+        this.setState({
+            galleryCol2Urls: col2Urls
+        });
+    });
+
+    var col3Urls = [];
+    galleryCol3.once('value', snap => {
+        snap.val().map( (obj) => {
+            col3Urls.push(obj.url);
+        });    
+        this.setState({
+            galleryCol3Urls: col3Urls
+        });
+    });
+
+  }
+
+  // showModal(obj) {
+  //   this.setState({show: true});
+  //   this.setState({url: obj});
+  // }
+
+  // hideModal() {
+  //   this.setState({show: false});
+  // }
+
   render() {
+      const col1List = this.state.galleryCol1Urls.map( (obj) => {
+          return (
+            <a className="pv2 db no-underline black">
+              {/*<img className="db w-100" src={obj} onClick={() => this.showModal(obj)} />*/}
+              <img className="db w-100" src={obj}/>
+            </a>
+          );
+      })
+
+     const col2List = this.state.galleryCol2Urls.map( (obj) => {
+          return (
+            <a className="pv2 db no-underline black"><img className="db w-100" src={obj} /></a>
+          );
+      })  
+
+      const col3List = this.state.galleryCol3Urls.map( (obj) => {
+          return (
+            <a className="pv2 db no-underline black"><img className="db w-100" src={obj} /></a>
+          );
+      }) 
+
+      // const imgModal = (
+      //   <Modal show={this.state.show} onHide={() => this.hideModal()} backdrop dialogClassName="">
+      //       <Modal.Body>
+      //         <img className="db w-100" src={this.state.url} />
+      //       </Modal.Body>
+      //   </Modal> 
+      // );
+
       return (
-        <main className="cf pa2">
-          <div className="fl w-100 w-50-ns ph2">
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/elevaters030211_960.jpg"} /></a>
-            <a href="" className="no-underline pv2 grow db"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/elevaters.jpg"} /></a>
-            <a href="" className="no-underline pv2 grow db"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/pink-and-noseworthy-22.12.10-cargo_960.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/hw090911_960.jpg"} /></a>
-          </div>
-          <div className="fl w-50 w-25-ns ph2">
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/adam-stern-031209_960-2.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/hw-080411-cargo_960.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/hw18-240112-cc_960.jpg"}/></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/hw-residency-cargo_960.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/orchid-2-mnkr_960.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/O270711_960-2.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/adam-stern-020510_960.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/adam-stern-130610_960.jpg"} /></a>
-          </div>
-          <div className="fl w-50 w-25-ns ph2">
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/zach-hurd-101218_960.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/zh170311.4.cargo_960.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/hwspringtour-cargo_960-1.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/cc-shanee_960.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/ZachHurd-190111s_960.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/hw170211pie-cargo_960.jpg"} /></a>
-            <a href="" className="pv2 grow db no-underline black"><img className="db w-100" src={"https://s3-us-west-2.amazonaws.com/prnt/adam-stern-191110_960.jpg"} /></a>
-          </div>
-        </main>
+        <div className="gallery-section">
+          <h2 className="tc f3 fw3 bg-white o-90 hot-pink">Gallery</h2>
+          <main className="cf pa2">
+            <div className="fl w-100 w-50-ns ph2">
+              { col1List }
+            </div>
+            <div className="fl w-50 w-25-ns ph2">
+              { col2List }
+            </div>
+            <div className="fl w-50 w-25-ns ph2">
+              { col3List }
+            </div>
+            {/* imgModal */}
+          </main>
+        </div>
     );
   }
 }

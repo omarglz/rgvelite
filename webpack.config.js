@@ -1,4 +1,5 @@
 var path = require("path");
+var webpack = require("webpack");
 
 var DIST_DIR = path.resolve(__dirname, "dist");
 var SRC_DIR = path.resolve(__dirname, "src");
@@ -21,7 +22,19 @@ var config = {
                 }
             }
         ]
-    }
+    },
+    plugins:[
+        new webpack.DefinePlugin({
+          'process.env':{
+            'NODE_ENV': JSON.stringify('production')
+          }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+          compress:{
+            warnings: false
+          }
+        })
+    ]
 };
 
 module.exports = config;

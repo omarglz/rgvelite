@@ -10,4 +10,4 @@ var config = {
 
 var firebaseApp = firebase.initializeApp(config);
 
-export default firebaseApp.database();
+export default firebaseApp;

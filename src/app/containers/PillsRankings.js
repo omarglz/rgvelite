@@ -9,7 +9,7 @@ class PillsRankings extends React.Component {
 	render() {
 	    return (
 	    	<article className="cf">
-			  	<ul className="list ph3 ph5-ns tc">
+			  	<ul className="list ph3 ph5-ns tc pv3 mb0">
 				  <li className="dib mr2"><button onClick={() => this.props.rClickChallengerButton()}  className={this.props.rankingsButtonsState.challengerBtn}>Challenger</button></li>
 				  <li className="dib mr2"><button onClick={() => this.props.rClickChampsButton()}      className={this.props.rankingsButtonsState.champsBtn}>Champs</button></li>
 				  <li className="dib mr2"><button onClick={() => this.props.rClickSuperChampsButton()} className={this.props.rankingsButtonsState.superChampsBtn}>Super Champs</button></li>
