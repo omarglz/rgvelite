@@ -32,7 +32,6 @@ class Tournaments extends React.Component {
 
 		// no filters
 		if (this.props.levelSelected === "none" && this.props.monthSelected === "none") {
-			console.log("no filters");
 			this.state.tournaments.map( (obj) => {
 				filteredTournaments.push(obj);
 			})
@@ -40,7 +39,6 @@ class Tournaments extends React.Component {
 
 		// level filter only
 		if (this.props.levelSelected != "none" && this.props.monthSelected === "none") {
-			console.log("levelSelected");
 			this.state.tournaments.map( (obj) => {
 				if (obj.level === this.props.levelSelected) {
 					filteredTournaments.push(obj);
@@ -50,7 +48,6 @@ class Tournaments extends React.Component {
 
 		// month filter only
 		if (this.props.levelSelected === "none" && this.props.monthSelected != "none") {
-			console.log("monthSelected");
 			this.state.tournaments.map( (obj) => {
 				if (obj.month === this.props.monthSelected) {
 					filteredTournaments.push(obj);
@@ -60,7 +57,6 @@ class Tournaments extends React.Component {
 
 		// combo filter
 		if (this.props.levelSelected != "none" && this.props.monthSelected != "none") {
-			console.log("both selected!");
 			this.state.tournaments.map( (obj) => {
 				if (obj.month === this.props.monthSelected && obj.level === this.props.levelSelected) {
 					filteredTournaments.push(obj);

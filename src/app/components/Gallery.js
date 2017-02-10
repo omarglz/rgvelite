@@ -16,7 +16,6 @@ export class Gallery extends React.Component {
 
   componentDidMount() {
     // read all tournaments from firebase
-    console.log('componentDidMount');
     var database = firebaseApp.database();
     var galleryCol1 = database.ref().child('gallery-col1');
     var galleryCol2 = database.ref().child('gallery-col2');

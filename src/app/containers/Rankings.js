@@ -35,7 +35,6 @@ class Rankings extends React.Component {
 
 		// no filters
 		if (this.props.rankingsLevelSelected === "none") {
-			console.log("no filters");
 			this.state.players.map( (obj) => {
 				filteredPlayers.push(obj);
 			})
@@ -43,7 +42,6 @@ class Rankings extends React.Component {
 
 		// level filter
 		if (this.props.rankingsLevelSelected != "none") {
-			console.log("rankingsLevelSelected");
 			this.state.players.map( (obj) => {
 				if (obj.level === this.props.rankingsLevelSelected) {
 					filteredPlayers.push(obj);
@@ -54,7 +52,7 @@ class Rankings extends React.Component {
 		
 		const playersList = filteredPlayers.map( (obj) => {
 			return (
-				<tr key={obj.id}>
+				<tr key={obj.name}>
 					<td className="pa3 bb">{obj.name}</td>
 					<td className="pa3 bb">{obj.division}</td>
 					<td className="pa3 bb">{obj["rank position"]}</td>

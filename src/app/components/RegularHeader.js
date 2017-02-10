@@ -15,11 +15,11 @@ export class Header extends React.Component {
 			      {/* Navigation. We hide it in small screens.*/}
 			      <nav className="mdl-navigation mdl-layout--large-screen-only">
 					<Link to={"/"}   className="mdl-navigation__link">Home</Link>
+					<Link to={"/about-us"}     className="mdl-navigation__link">About Us</Link>
 			      	<Link to={"/programs"}   className="mdl-navigation__link">Programs</Link>
 			        <Link to={"/tournaments"} className="mdl-navigation__link">Tournaments</Link>
-							<Link to={"/rankings"}    className="mdl-navigation__link">Rankings</Link>
+					<Link to={"/rankings"}    className="mdl-navigation__link">Rankings</Link>
 			        <Link to={"/gallery"}     className="mdl-navigation__link">Gallery</Link>
-			        <Link to={"/about-us"}     className="mdl-navigation__link">About Us</Link>
 			      </nav>
 			    </div>
 			</header>

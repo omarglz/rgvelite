@@ -34,10 +34,41 @@ export class NavBar extends React.Component {
 				</div>	
 			)
 		}
-
+		
 		var title_text = "RGV Elite Tennis Academy";
+		
+		var footer_contact = (
+			<div className="dtc pb2 pl5-l">
+			  <a href="tel:9567891144">
+			      <h2 className="dib f5 f4-ns fw3 pr3 w-auto-ns footer-gray w-100 underline hover-blue">
+					<i className="material-icons dib v-mid green pr2">phone</i>(956) 789-1144
+				  </h2>
+			  </a>
+			  <a href="mailto:danieldelacruz71@hotmail.com" target="_blank">
+				  <h2 className="dib f5 f4-ns fw3 pr3 w-auto-ns w-100 footer-gray underline hover-blue">
+					<i className="material-icons dib v-mid blue pr2">mail</i>danieldelacruz71@hotmail.com
+				  </h2>
+			  </a>
+			  <a href="https://www.google.com/maps/place/Bentsen+Palm+Community+Park,+Inspiration+Rd,+Mission,+TX+78572/@26.1980166,-98.363231,16z/data=!3m1!4b1!4m5!3m4!1s0x8665a9cc9d416ddd:0xbc33ecd102bfb138!8m2!3d26.1948335!4d-98.3560799">
+				  <h2 className="dib f5 f4-ns fw3 w-auto-ns w-100 footer-gray underline hover-blue">
+					<i className="material-icons dib v-mid red pr2">location_on</i>Bentsen Palm Community Park, Mission, TX
+				  </h2>
+			  </a>
+		    </div>
+		);
 		if (this.props.children.props.location.pathname === "/") {
-			title_text="";
+			footer_contact = null;
+		}
+		else if (this.props.children.props.location.pathname === "/about-us") {
+			footer_contact = (
+				<div className="dtc pb2 pl5-l">
+				  <a href="https://www.google.com/maps/place/Bentsen+Palm+Community+Park,+Inspiration+Rd,+Mission,+TX+78572/@26.1980166,-98.363231,16z/data=!3m1!4b1!4m5!3m4!1s0x8665a9cc9d416ddd:0xbc33ecd102bfb138!8m2!3d26.1948335!4d-98.3560799">
+					<h2 className="dib f5 f4-ns fw3 w-auto-ns w-100 footer-gray underline hover-blue">
+						<i className="material-icons dib v-mid red pr2">location_on</i>Bentsen Palm Community Park, Mission, TX
+				  	</h2>
+				  </a>
+			    </div>
+		    );
 		}
 
 	    return (
@@ -53,11 +84,11 @@ export class NavBar extends React.Component {
 				  </header>
 			    <nav className="mdl-navigation">
 			    	  <Link to={"/"}    onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">home</Link>
+			    	  <Link to={"/about-us"}  onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">about us</Link>
 					      <Link to={"/programs"}    onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">programs</Link>
 			          <Link to={"/tournaments"} onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">tournaments</Link>
 						  	<Link to={"/rankings"}    onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">rankings</Link>
 			          <Link to={"/gallery"}     onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">gallery</Link>
-			          <Link to={"/about-us"}  onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">about us</Link>
 			    </nav>
 			  </div>
 
@@ -67,46 +98,14 @@ export class NavBar extends React.Component {
 			    </div>
 			    <div className="mdl-layout-spacer"></div>
 			    <footer className="mdl-mini-footer">
-				  
 				  <div className="ph2-ns">
-				    <div className="dtc pv2 fn-l fl w-auto-l w-100">
+				    <div className="dtc pt2 fn-l fl w-auto-l w-100">
 				      <h2 className="f4 fw3">© 2017 RGV Elite Tennis Academy</h2>
 				    </div>
-				    <div className="dtc pv2 pl5-l">
-				      <h2 className="dib f5 f4-ns fw3 pr3 w-auto-ns w-100">
-						<i className="material-icons dib v-mid green pr2">phone</i>(956) 240-6058
-					  </h2>
-					  <h2 className="dib f5 f4-ns fw3 pr3 w-auto-ns w-100">
-						<i className="material-icons dib v-mid blue pr2">mail</i>hello@rgvelite.com
-					  </h2>
-					  <h2 className="dib f5 f4-ns fw3 w-auto-ns w-100">
-						<i className="material-icons dib v-mid red pr2">location_on</i>Bentsen Palm Community Park, Mission, TX
-					  </h2>
-				    </div>
-				  </div>
 
-				  {/*<div className="mdl-mini-footer__left-section">
-				    <h2 className="f3 fw3">© 2017 RGV Elite Tennis Academy</h2>
+				    { footer_contact }
+
 				  </div>
-				  <div className="mdl-mini-footer__right-section">
-					<h2 className="fl w-third-ns w-100 f5-contact f4-ns fw3">
-						<i className="material-icons dib v-mid red pr2">location_on</i>Bentsen Palm Community Park, Mission, TX
-					</h2>
-					<h2 className="fl w-third-ns w-100 f5-contact f4-ns fw3">
-						<i className="material-icons dib v-mid red pr2">location_on</i>Bentsen Palm Community Park, Mission, TX
-					</h2>
-				  </div>
-				  <div className="cf db footer-contact-section">
-					<h2 className="fl w-third-ns w-100 f5-contact f4-ns fw3">
-						<i className="material-icons dib v-mid green pr2">phone</i>(956) 240-6058
-					</h2>
-					<h2 className="fl w-third-ns w-100 f5-contact f4-ns fw3">
-						<i className="material-icons dib v-mid blue pr2">email</i>hello@rgvelite.com
-					</h2>
-					<h2 className="fl w-third-ns w-100 f5-contact f4-ns fw3">
-						<i className="material-icons dib v-mid red pr2">location_on</i>Bentsen Palm Community Park, Mission, TX
-					</h2>
-				  </div>*/}
 				</footer>
 				{ back_to_top }
 				{ back_to_top_rankings }

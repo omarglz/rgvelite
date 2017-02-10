@@ -30,7 +30,7 @@ export class Programs extends React.Component {
 		  		<div className="beginner-title bg-beginners-orange pv3">
 					<h2 className="db f3 f2-l lh-solid tc fw3 mt0 pa0 white">Beginners / 10 and Under</h2>
 				</div>
-				<img src={"../images/beginners5_edited.jpg"} className="fl w-100 w-50-l" />
+				<img src={"../images/beginners5_editweb.jpg"} className="fl w-100 w-50-l" />
 				<div className="programs-beginner-overlay fl w-100 w-50-l">
 					<article className="cf">
 					  <div className="pv2 ph3 fl w-100">
@@ -75,7 +75,7 @@ export class Programs extends React.Component {
 				<div className="challenger-title bg-challengers-pink pv3">
 					<h2 className="db f3 f2-l lh-solid tc fw3 mt0 pa0 white">Challenger</h2>
 			  	</div>
-				<img src={"../images/challenger1_edited3.jpg"} className="fl w-100 w-50-l" />
+				<img src={"../images/challenger1_editweb.jpg"} className="fl w-100 w-50-l" />
 				<div className="programs-challenger-overlay fl w-100 w-50-l">
 					<article className="cf">
 					  <div className="pv2 ph3 fl w-100">
@@ -128,7 +128,7 @@ export class Programs extends React.Component {
 			  	<div className="elite-title bg-elite-green pv3">
 					<h2 className="db f3 f2-l lh-solid tc fw3 mt0 pa0 white">Elite</h2>
 			  	</div>
-			  	<img src={"../images/elite1_edited.jpg"} className="fl w-100 w-50-l" />
+			  	<img src={"../images/elite1_editweb.jpg"} className="fl w-100 w-50-l" />
 				<div className="programs-elite-overlay fl w-100 w-50-l">
 				  	<article className="cf">
 					  <div className="pv2 ph3 fl w-100">
@@ -173,7 +173,7 @@ export class Programs extends React.Component {
 				<div className="private-title bg-private-purple pv3">
 					<h2 className="db f3 f2-l lh-solid tc fw3 mt0 pa0 white">Private lessons</h2>
 			  	</div>
-				<img src={"../images/private1.jpg"} className="fl w-100 w-50-l" />
+				<img src={"../images/private1-editweb.jpg"} className="fl w-100 w-50-l" />
 				<div className="programs-private-overlay fl w-100 w-50-l">
 					<article className="cf">
 					  <div className="pv2 ph3 fl w-100">

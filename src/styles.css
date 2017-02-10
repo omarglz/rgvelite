@@ -29,12 +29,21 @@ h2 {
   .right-3-l { right: 4rem; }
 }
 
+.about-us-bold {
+	color: #414141;
+	font-weight: 400;
+}
+
 .bottom-l {
 	bottom: 6rem;
 }
 
 .shadow-5-ns {
 	box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .4 );
+}
+
+.footer-gray {
+	color: #9e9e9e;
 }
 
 .beginners-orange {
@@ -90,7 +99,7 @@ h2 {
       rgba(0, 0, 0, 0.25), 
       rgba(0, 0, 0, 0.25)
     ),
-	url('./images/titlePic.jpg') center no-repeat;
+	url('./images/titlePic-editweb.jpg') center no-repeat;
 	background-size: cover;
 } 
 
@@ -103,7 +112,7 @@ h2 {
 		rgba(0, 0, 0, 0.00),
 		rgba(0, 0, 0, 0.00)
     ),
-	url('./images/beginners4.jpg') center no-repeat;
+	url('./images/beginners4-editweb.jpg') center no-repeat;
 	background-size: cover;
 	height: 500px;
 }
@@ -131,7 +140,6 @@ h2 {
 
   .custom-link:hover {
   	text-decoration: underline;
-    /*color: #C2185A !important;*/
   }
 
   .custom-link .material-icons {
@@ -142,19 +150,16 @@ h2 {
 
 /*this changes the color for the rankings section buttons*/
 .mdl-button--accent.mdl-button--accent {
-	/*94B6D3 or 989FB1 or C3D9EC*/
 	color: #C3D9EC;
 }
 /*this changes the color for the rankings section buttons*/
 .mdl-button--accent.mdl-button--accent.mdl-button--raised {
-	/*94B6D3 or 989FB1*/
 	color: black;
 	background-color: #C3D9EC;
 }
 
 /*this changes the color for the tournaments section level buttons*/
 .mdl-button--accent-custom.mdl-button--accent-custom {
-	/*FD2228 OR 8DB3E8 or FF5722*/
 	color: #FF5722;
 }
 /*this changes the color for the tournaments section level buttons*/
@@ -229,7 +234,7 @@ h2 {
 }
 
 .prim-text {
-	color: #212121;
+	color: #414141;
 	font-weight: 300;
 }
 
@@ -243,7 +248,7 @@ h2 {
       rgba(0, 0, 0, 0.45), 
       rgba(0, 0, 0, 0.45)
     ),
-	url('./images/elite4.jpg') center no-repeat;
+	url('./images/elite4-editweb.jpg') center no-repeat;
 	background-size: cover;
 }
 
@@ -254,7 +259,7 @@ h2 {
       rgba(0, 0, 0, 0.40), 
       rgba(0, 0, 0, 0.40)
     ),
-	url('./images/tennis-ball2.jpg') center no-repeat;
+	url('./images/tennis-ball-editweb.jpg') center no-repeat;
 	background-size: cover;
 }
 
@@ -282,7 +287,7 @@ h2 {
       rgba(0, 0, 0, 0.1), 
       rgba(0, 0, 0, 0.1)
 	),
-	url('./images/tennis-court3.jpg') center no-repeat;
+	url('./images/tennis-court-editweb.jpg') center no-repeat;
 	background-size: cover;
 }
 
