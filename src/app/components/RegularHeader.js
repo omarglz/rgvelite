@@ -9,7 +9,7 @@ export class Header extends React.Component {
 			      <div className="mdl-layout__drawer-button">
 					<i className="material-icons">menu</i>
 				  </div>
-				  <a href="/" className="mdl-layout-title header-font-small link white">{this.props.title}</a>
+				  <a href="/" className="mdl-layout-title header-font-small link white"><span itemProp="name">RGV Elite Tennis Academy</span></a>
 			      {/* Add spacer, to align navigation to the right*/}
 			      <div id="layout-spacer" className="mdl-layout-spacer"></div>
 			      {/* Navigation. We hide it in small screens.*/}

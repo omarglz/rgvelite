@@ -35,8 +35,6 @@ export class NavBar extends React.Component {
 			)
 		}
 		
-		var title_text = "RGV Elite Tennis Academy";
-		
 		var footer_contact = (
 			<div className="dtc pb2 pl5-l">
 			  <a href="tel:9567891144">
@@ -57,7 +55,7 @@ export class NavBar extends React.Component {
 		    </div>
 		);
 		if (this.props.children.props.location.pathname === "/") {
-			footer_contact = null;
+			footer_contact = (<Link to={"/sign-in"} className="f4 fw3 footer-gray no-underline">Sign In</Link>);
 		}
 		else if (this.props.children.props.location.pathname === "/about-us") {
 			footer_contact = (
@@ -72,23 +70,23 @@ export class NavBar extends React.Component {
 		}
 
 	    return (
-			<div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-			  <Header title={title_text} />
+			<div itemScope itemType="http://schema.org/LocalBusiness" className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			  <Header />
 			  <div className="mdl-layout__drawer">
 				  <header className="mdl-layout__drawer-header">
 				    <div className="mdl-layout__header-row">
 						  <div className="mdl-layout__drawer-button">
-								<i className="material-icons white" onClick={() => this.hideDrawer()}>close</i>
+								<i className="material-icons forrest-green" onClick={() => this.hideDrawer()}>close</i>
 						  </div>
 				    </div>
 				  </header>
 			    <nav className="mdl-navigation">
-			    	  <Link to={"/"}    onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">home</Link>
-			    	  <Link to={"/about-us"}  onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">about us</Link>
-					      <Link to={"/programs"}    onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">programs</Link>
-			          <Link to={"/tournaments"} onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">tournaments</Link>
-						  	<Link to={"/rankings"}    onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">rankings</Link>
-			          <Link to={"/gallery"}     onClick={() => this.hideDrawer()} className="pv3 tc f3 fw3 tracked link white no-underline bg-animate hover-bg-white-80 hover-hot-pink">gallery</Link>
+			    	  <Link to={"/"}    onClick={() => this.hideDrawer()} className="pv3 tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80 ">Home</Link>
+			    	  <Link to={"/about-us"}  onClick={() => this.hideDrawer()} className="pv3 tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80 ">About Us</Link>
+					      <Link to={"/programs"}    onClick={() => this.hideDrawer()} className="pv3 tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80 ">Programs</Link>
+			          <Link to={"/tournaments"} onClick={() => this.hideDrawer()} className="pv3 tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80 ">Tournaments</Link>
+						  	<Link to={"/rankings"}    onClick={() => this.hideDrawer()} className="pv3 tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80 ">Rankings</Link>
+			          <Link to={"/gallery"}     onClick={() => this.hideDrawer()} className="pv3 tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80 ">Gallery</Link>
 			    </nav>
 			  </div>
 

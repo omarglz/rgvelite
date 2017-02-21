@@ -13,7 +13,7 @@ export class About extends React.Component {
 						</h3>
 						<h3 className="f3-ns f4 fw3 tc sec-text lh-copy">
 							Our years of experience allow us to teach our players the proper techniques that will take them to their goals quicker. 
-							Our well-structured training <a href={"../programs"} className="link underline-hover fw4">programs</a> allow our 
+							Our well-structured training <a href={"../programs"} className="custom-green-link fw4">programs</a> allow our 
 							players to <span className="f3-ns f4 about-us-bold lh-copy">have fun and build friendships</span> while also pushing 
 							themselves to <span className="f3-ns f4 about-us-bold lh-copy">improve every day</span>. 
 							And most importantly, our players <span className="f3-ns f4 about-us-bold lh-copy">develop positive habits</span> on the tennis court 
@@ -45,17 +45,17 @@ export class About extends React.Component {
 						    <div className="dt w-100">
 						      <div className="dtc center">
 						      	<a href="tel:9562406058">
-							        <h2 className="dib f4 fw3 pr3 w-100 mb2 sec-text underline hover-blue">
+							        <h2 className="dib f4 fw3 pr3 w-100 mb2 sec-text underline hover-orange-custom">
 										<i className="material-icons dib v-mid green pr2">phone</i>(956) 240-6058
 					  				</h2>
 				  				</a>
 				  				<a href="mailto:lepanche@hotmail.com" target="_blank">
-							        <h2 className="dib f4 fw3 pr3 w-100 mb2 sec-text underline hover-blue">
-										<i className="material-icons dib v-mid dark-red pr2">mail</i>lepanche@hotmail.com
+							        <h2 className="dib f4 fw3 pr3 w-100 mb2 sec-text underline hover-orange-custom">
+										<i className="material-icons dib v-mid email-icon-color pr2">mail</i>lepanche@hotmail.com
 									</h2>
 								</a>
 								<a href="https://twitter.com/lepanchie" target="_blank">
-									<h2 className="dib f4 fw3 pr3 w-100 mb0 sec-text underline hover-blue">
+									<h2 className="dib f4 fw3 pr3 w-100 mb0 sec-text underline hover-orange-custom">
 										<i className="fa fa-twitter dib v-mid blue pr2" aria-hidden="true"></i>@lepanchie
 									</h2>
 								</a>
@@ -81,13 +81,13 @@ export class About extends React.Component {
 						    <div className="dt w-100">
 						      <div className="dtc center">
 						      	<a href="tel:9567891144">
-							        <h2 className="dib f4 fw3 pr3 w-100 mb2 sec-text underline hover-blue">
+							        <h2 className="dib f4 fw3 pr3 w-100 mb2 sec-text underline hover-orange-custom">
 										<i className="material-icons dib v-mid green pr2">phone</i>(956) 789-1144
 					  				</h2>
 				  				</a>
 				  				<a href="mailto:danieldelacruz71@hotmail.com" target="_blank">
-							        <h2 className="dib f4 fw3 w-100 mb0 sec-text underline hover-blue">
-										<i className="material-icons dib v-mid dark-red pr2">mail</i>danieldelacruz71@hotmail.com
+							        <h2 className="dib f4 fw3 w-100 mb0 sec-text underline hover-orange-custom">
+										<i className="material-icons dib v-mid email-icon-color pr2">mail</i>danieldelacruz71@hotmail.com
 									</h2>
 								</a>
 						      </div>

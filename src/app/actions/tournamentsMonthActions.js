@@ -1,3 +1,8 @@
+export function clickAllButton() {
+	return {
+		type: "CLICK_ALL_BUTTON"
+	};
+}
 export function clickJanButton() {
 	return {
 		type: "CLICK_JAN_BUTTON"

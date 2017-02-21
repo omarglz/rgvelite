@@ -13,8 +13,8 @@ export class Home extends React.Component {
 
 				<div className="home-title bg-dark-gray">
 					<div className="home-title-overlay pa5 pa6-ns">
-						<h1 className="db f-headline lh-solid tc fw3 mt0 pa0 white">rgv elite</h1>
-						<h1 className="f3 lh-solid tc fw3 mv0 pa0 ttu white">tennis academy</h1>
+						<h1 className="db f-headline lh-solid tc fw3 mt0 pa0 white">RGV Elite</h1>
+						<h1 className="f3 lh-solid tc fw3 mv0 pa0 white">Tennis Academy</h1>
 					</div>
 				</div>
 
@@ -35,7 +35,7 @@ export class Home extends React.Component {
 						</div>
 					</div>
 					<div className="dtc-l v-mid-l">
-						<img src={"../images/elite5-editweb.jpg"} className="fl w-100 shadow-5-ns" />
+						<img itemProp="image" src={"../images/elite5-editweb.jpg"} className="fl w-100 shadow-5-ns" />
 					</div>
 				</div>
 
@@ -102,13 +102,13 @@ export class Home extends React.Component {
 								<div className="phone-daniel">
 									<i className="material-icons dib v-mid green pr2">phone</i>
 									<a href="tel:9567891144">
-										<h2 className="dib f5-contact f4-ns fw3 v-mid sec-text underline hover-blue">(956) 789-1144</h2>
+										<h2 itemProp="telephone" className="dib f5-contact f4-ns fw3 v-mid sec-text underline hover-orange-custom">(956) 789-1144</h2>
 									</a>
 								</div>
 								<div className="email-daniel">
 									<i className="material-icons dib v-mid blue pr2">email</i>
 									<a href="mailto:danieldelacruz71@hotmail.com" target="_blank">
-										<h2 className="dib f5-contact f4-ns fw3 v-mid sec-text underline hover-blue">danieldelacruz71@hotmail.com</h2>
+										<h2 itemProp="email" className="dib f5-contact f4-ns fw3 v-mid sec-text underline hover-orange-custom">danieldelacruz71@hotmail.com</h2>
 									</a>
 								</div>
 							  </div>
@@ -121,13 +121,13 @@ export class Home extends React.Component {
 								<div className="phone-pancho">
 									<i className="material-icons dib v-mid green pr2">phone</i>
 									<a href="tel:9562406058">
-										<h2 className="dib f5-contact f4-ns fw3 v-mid sec-text underline hover-blue">(956) 240-6058</h2>
+										<h2 className="dib f5-contact f4-ns fw3 v-mid sec-text underline hover-orange-custom">(956) 240-6058</h2>
 									</a>
 								</div>
 								<div className="email-pancho">
 									<i className="material-icons dib v-mid blue pr2">email</i>
 									<a href="mailto:lepanche@hotmail.com" target="_blank">
-										<h2 className="dib f5-contact f4-ns fw3 v-mid sec-text underline hover-blue">lepanche@hotmail.com</h2>
+										<h2 className="dib f5-contact f4-ns fw3 v-mid sec-text underline hover-orange-custom">lepanche@hotmail.com</h2>
 									</a>
 								</div>
 							  </div>
@@ -138,9 +138,11 @@ export class Home extends React.Component {
 							<div className="location tc-l pt4-l">
 								<i className="material-icons dib v-mid red pr2">location_on</i>
 								<a href="https://www.google.com/maps/place/Bentsen+Palm+Community+Park,+Inspiration+Rd,+Mission,+TX+78572/@26.1980166,-98.363231,16z/data=!3m1!4b1!4m5!3m4!1s0x8665a9cc9d416ddd:0xbc33ecd102bfb138!8m2!3d26.1948335!4d-98.3560799">
-									<h2 className="dib f5-contact f4-ns fw3 v-mid pr2 sec-text underline hover-blue">Bentsen Palm Community Park</h2>
+									<h2 className="dib f5-contact f4-ns fw3 v-mid pr2 sec-text underline hover-orange-custom">Bentsen Palm Community Park</h2>
 								</a>
-								<h2 className="dib f5-contact f4-ns fw3 v-mid pad-small sec-text">Mission, TX</h2>
+								<h2 itemProp="address" itemScope itemType="http://schema.org/PostalAddress" className="dib f5-contact f4-ns fw3 v-mid pad-small sec-text">
+									<span itemProp="addressLocality">Mission</span>, <span itemProp="addressRegion">TX</span>
+								</h2>
 							</div>
 						</div>
 					</div>

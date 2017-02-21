@@ -81,7 +81,7 @@ class Tournaments extends React.Component {
 
 	    return (
 			<div id={"top"} className="mw9 center tournaments-section">
-				<h2 className="tc f3 fw3 bg-white o-90 hot-pink">Tournaments 2017</h2>
+				<h2 className="tc f3 fw3 bg-white o-90 forrest-green">Tournaments 2017</h2>
 				
 				<PillsTournaments />
 				

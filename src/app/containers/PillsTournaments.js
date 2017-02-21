@@ -7,6 +7,7 @@ import { tClickChampsButton } from '../actions/tournamentsLevelActions.js';
 import { tClickSuperChampsButton } from '../actions/tournamentsLevelActions.js';
 import { tClickOpenButton } from '../actions/tournamentsLevelActions.js';
 
+import { clickAllButton } from '../actions/tournamentsMonthActions.js';
 import { clickJanButton } from '../actions/tournamentsMonthActions.js';
 import { clickFebButton } from '../actions/tournamentsMonthActions.js';
 import { clickMarButton } from '../actions/tournamentsMonthActions.js';
@@ -35,6 +36,7 @@ class PillsTournaments extends React.Component {
 			  </div>
 			  <div className="fl w-100 tc pb3">
 			  	<ul className="list ph3 ph5-ns tc mb0">
+			  	  <li className="dib mr2"><button onClick={() => this.props.clickAllButton()} className={this.props.monthButtonsState.allButton}>All Months</button></li>
 				  <li className="dib mr2"><button onClick={() => this.props.clickJanButton()} className={this.props.monthButtonsState.janButton}>Jan.</button></li>
 				  <li className="dib mr2"><button onClick={() => this.props.clickFebButton()} className={this.props.monthButtonsState.febButton}>Feb.</button></li>
 				  <li className="dib mr2"><button onClick={() => this.props.clickMarButton()} className={this.props.monthButtonsState.marButton}>Mar.</button></li>
@@ -80,6 +82,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     tClickOpenButton: () => {
 		dispatch(tClickOpenButton());
+    },
+    clickAllButton: () => {
+		dispatch(clickAllButton());
     },
     clickJanButton: () => {
 		dispatch(clickJanButton());

@@ -11,7 +11,7 @@ class Rankings extends React.Component {
 		};
 	} 
 	componentDidMount() {
-		// read all tournaments from firebase
+		// read all rankings from firebase
 		var dummyList = [];
 		var database = firebaseApp.database();
 		var rankingsRef = database.ref('rankings/');
@@ -32,14 +32,6 @@ class Rankings extends React.Component {
 		// Dynamically build table rows from database
 		// order by ranking
 		var filteredPlayers = [];
-
-		// no filters
-		if (this.props.rankingsLevelSelected === "none") {
-			this.state.players.map( (obj) => {
-				filteredPlayers.push(obj);
-			})
-		}
-
 		// level filter
 		if (this.props.rankingsLevelSelected != "none") {
 			this.state.players.map( (obj) => {
@@ -66,7 +58,7 @@ class Rankings extends React.Component {
 
 	    return (
 			<div id={"top"} className="mw9 center rankings-section">
-				<h2 className="tc f3 fw3 bg-white o-90 hot-pink">Rankings</h2>
+				<h2 className="tc f3 fw3 bg-white o-90 forrest-green">Rankings</h2>
 
 				<PillsRankings />
 

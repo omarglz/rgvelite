@@ -94,7 +94,7 @@ export class Gallery extends React.Component {
 
       return (
         <div className="gallery-section">
-          <h2 className="tc f3 fw3 bg-white o-90 hot-pink">Gallery</h2>
+          <h2 className="tc f3 fw3 bg-white o-90 forrest-green">Gallery</h2>
           <main className="cf pa2">
             <div className="fl w-100 w-50-ns ph2">
               { col1List }

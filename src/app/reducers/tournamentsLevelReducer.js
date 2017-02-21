@@ -1,10 +1,10 @@
 const tournamentsLevelReducer = (state = {
     challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
+    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent-custom",
     champsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
     superChampsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
     openBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-    levelSelected: "none"
+    levelSelected: "Challenger 2-Day"
 }, action) => {
     switch (action.type) {
         case "T_CLICK_CHALLENGER1DAY_BUTTON":
@@ -17,17 +17,6 @@ const tournamentsLevelReducer = (state = {
                     superChampsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
                     openBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
                     levelSelected: "Challenger 1-Day"
-                };
-            }
-            else {
-                state = {
-                    ...state,
-                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent-custom", 
-                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent-custom", 
-                    champsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    openBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    levelSelected: "none"
                 };
             }
             break;
@@ -43,17 +32,6 @@ const tournamentsLevelReducer = (state = {
                     levelSelected: "Challenger 2-Day"
                 };
             }
-            else {
-                state = {
-                    ...state,
-                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent-custom", 
-                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent-custom", 
-                    champsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    openBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    levelSelected: "none"
-                };
-            }
             break;
         case "T_CLICK_CHAMPS_BUTTON":
             if (state.champsBtn === "mdl-button mdl-js-button mdl-button--accent-custom") {
@@ -65,17 +43,6 @@ const tournamentsLevelReducer = (state = {
                     superChampsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
                     openBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
                     levelSelected: "Champs"
-                };
-            }
-            else {
-                state = {
-                    ...state,
-                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent-custom", 
-                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    champsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    openBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    levelSelected: "none"
                 };
             }
             break;
@@ -91,17 +58,6 @@ const tournamentsLevelReducer = (state = {
                     levelSelected: "Super Champs"
                 };
             }
-            else {
-                state = {
-                    ...state,
-                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent-custom", 
-                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    champsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    openBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    levelSelected: "none"
-                };
-            }
             break;
         case "T_CLICK_OPEN_BUTTON":
             if (state.openBtn === "mdl-button mdl-js-button mdl-button--accent-custom") {
@@ -113,17 +69,6 @@ const tournamentsLevelReducer = (state = {
                     superChampsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
                     openBtn: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent-custom",
                     levelSelected: "Open"
-                };
-            }
-            else {
-                state = {
-                    ...state,
-                    challenger1DayBtn: "mdl-button mdl-js-button mdl-button--accent-custom", 
-                    challenger2DayBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    champsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    superChampsBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    openBtn: "mdl-button mdl-js-button mdl-button--accent-custom",
-                    levelSelected: "none"
                 };
             }
             break;

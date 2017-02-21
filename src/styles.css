@@ -59,26 +59,27 @@ h2 {
 }
 
 .bg-beginners-orange {
-	/*4F759A or F57C00*/
-	background-color: #F57C00;
+	background-color: #D66F1A;
+
 }
 
 .bg-challengers-pink{
-	background-color: #E91E63;
+	background-color: #870a0a;
 }
 
 .bg-elite-green {
-	background-color: #2D9434;
+	background-color: #004D00;
 }
 
 .bg-private-purple {
-	background-color: #802470;
+	background-color: #065151;
 }
 
 .bg-rankings-table {
 	/*DED6DC OR DDD9CD*/
 	background-color: #DDD9CD;
 }
+
 
 .bg-tournaments-table {
 	overflow: scroll !important;
@@ -125,6 +126,28 @@ h2 {
 	color: #FF4081; 
 }
 
+.hover-orange-custom:hover {
+	color: #CE6C15;
+}
+
+.forrest-green {
+	color: #003300;
+}
+
+.custom-green-link {
+	/*006d00*/
+	color: #CE6C15;
+	text-decoration: none;
+}
+.custom-green-link:hover {
+	color: #CE6C15;
+	text-decoration: underline;
+}
+
+.email-icon-color {
+	color: #E32255;
+}
+
 .list {
 	margin-top: 0;
 }
@@ -135,7 +158,26 @@ h2 {
 
 .custom-link {
   text-decoration: none;
-  color: #2196F3 !important;
+  /*006D00*/
+  color: #CE6C15 !important;
+
+  /*#FFAC58
+.color-primary-2 { color: #FFCD9A }
+.color-primary-3 { color: #FF8D19 }
+.color-primary-4 { color: #FF8100*/
+
+/*.color-primary-0 { color: #37891D }
+
+	.color-primary-1 { color: #6E8766 }
+.color-primary-2 { color: #426537 }
+.color-primary-3 { color: #0D3600 }
+.color-primary-4 { color: #0C3200 }
+
+.color-complement-0 { color: #1A7D26 }	
+.color-complement-1 { color: #5D7C61 }
+.color-complement-2 { color: #335C38 }
+.color-complement-3 { color: #003106 }
+.color-complement-4 { color: #002E06 }*/
 }
 
   .custom-link:hover {
@@ -196,7 +238,7 @@ h2 {
 
 .mdl-layout__drawer {
 	border-right-width: 0;
-	background-color: #1976D2;
+	background-color: #999999;
     opacity: .9;
     position: fixed;
     width: 100%;
@@ -209,7 +251,7 @@ h2 {
 }
 
 .mdl-layout__header {
-	background-color: #1976D2;
+	background-color: #003300;
 }
 
 .mdl-layout-title {
@@ -222,7 +264,7 @@ h2 {
 }
 
 .mdl-layout--large-screen-only .mdl-navigation__link:hover {
-	border-bottom: 4px solid #FF4081;
+	border-bottom: 4px solid #fff;
 }
 
 .mdl-mini-footer {

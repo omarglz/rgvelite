@@ -8,6 +8,8 @@ import { Programs } from './components/Programs.js';
 import { Root } from './components/Root.js';
 import { Gallery } from './components/Gallery.js';
 import { About } from './components/About.js';
+import { SignIn } from './components/SignIn.js';
+import Admin from './containers/Admin.js';
 import Tournaments from './containers/Tournaments.js';
 import Rankings from './containers/Rankings.js';
 
@@ -22,6 +24,8 @@ render (
     			<Route path={"gallery"} component={Gallery} />
     			<Route path={"rankings"} component={Rankings} />
     			<Route path={"about-us"} component={About} />
+                <Route path={"sign-in"} component={SignIn} />
+                <Route path={"admin"} component={Admin} />
     		</Route>
     	</Router>
     </Provider>,
