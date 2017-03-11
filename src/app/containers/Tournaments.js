@@ -12,11 +12,13 @@ class Tournaments extends React.Component {
 	} 
 	componentDidMount() {
 		// read all tournaments from firebase
+		var dummyList = [];
 		var database = firebaseApp.database();
-		var tournamentsRef = database.ref().child('tournaments');
-		tournamentsRef.once('value', snap => {
+		var tournamentsRef = database.ref().child('test');
+		tournamentsRef.orderByChild("month").on("child_added", snap => {
+			dummyList.push(snap.val());
 			this.setState({
-				tournaments: snap.val()
+				tournaments: dummyList
 			});
 		});
 	}

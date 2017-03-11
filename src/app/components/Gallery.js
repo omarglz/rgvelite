@@ -8,49 +8,27 @@ export class Gallery extends React.Component {
     this.state = {
       url: "",
       show: false,
+      allUrls: [],
       galleryCol1Urls: [],
-      galleryCol2Urls: [],
-      galleryCol3Urls: []
+      galleryCol2Urls: []
     };
   } 
 
   componentDidMount() {
     // read all tournaments from firebase
     var database = firebaseApp.database();
-    var galleryCol1 = database.ref().child('gallery-col1');
-    var galleryCol2 = database.ref().child('gallery-col2');
-    var galleryCol3 = database.ref().child('gallery-col3');
-
-    var col1Urls = [];
-    galleryCol1.once('value', snap => {
+    var galleryAll = database.ref().child('gallery-all');
+    var tempUrls = [];
+    galleryAll.once('value', snap => {
         snap.val().map( (obj) => {
-            col1Urls.push(obj.url);
+            tempUrls.push(obj.url);
         });    
+        var half = Math.floor((tempUrls.length)/2);
         this.setState({
-            galleryCol1Urls: col1Urls
+          galleryCol1Urls: tempUrls.splice(0,half),
+          galleryCol2Urls: tempUrls.splice(0,half),
         });
     });
-
-    var col2Urls = [];
-    galleryCol2.once('value', snap => {
-        snap.val().map( (obj) => {
-            col2Urls.push(obj.url);
-        });    
-        this.setState({
-            galleryCol2Urls: col2Urls
-        });
-    });
-
-    var col3Urls = [];
-    galleryCol3.once('value', snap => {
-        snap.val().map( (obj) => {
-            col3Urls.push(obj.url);
-        });    
-        this.setState({
-            galleryCol3Urls: col3Urls
-        });
-    });
-
   }
 
   // showModal(obj) {
@@ -78,12 +56,6 @@ export class Gallery extends React.Component {
           );
       })  
 
-      const col3List = this.state.galleryCol3Urls.map( (obj) => {
-          return (
-            <a className="pv2 db no-underline black"><img className="db w-100" src={obj} /></a>
-          );
-      }) 
-
       // const imgModal = (
       //   <Modal show={this.state.show} onHide={() => this.hideModal()} backdrop dialogClassName="">
       //       <Modal.Body>
@@ -99,11 +71,8 @@ export class Gallery extends React.Component {
             <div className="fl w-100 w-50-ns ph2">
               { col1List }
             </div>
-            <div className="fl w-50 w-25-ns ph2">
+            <div className="fl w-100 w-50-ns ph2">
               { col2List }
-            </div>
-            <div className="fl w-50 w-25-ns ph2">
-              { col3List }
             </div>
             {/* imgModal */}
           </main>

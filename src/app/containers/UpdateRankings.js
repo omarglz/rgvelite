@@ -1,4 +1,5 @@
 import React from 'react';
+import * as firebase from 'firebase';
 import { connect } from 'react-redux';
 import PillsRankings from './PillsRankings.js';
 import firebaseApp from '../firebase.js';
@@ -35,6 +36,28 @@ class UpdateRankings extends React.Component {
 		});
 	}
 
+	componentWillMount() {
+	    this.authListener = this.authListener.bind(this);
+	    this.authListener();
+	}
+	logoutWithPass() {
+		firebase.auth().signOut().then(function() {
+		  // Sign-out successful.
+		}, function(error) {
+		  // An error happened.
+		  console.log("ERROR");
+		});
+	}
+	authListener() {
+		this.fireBaseListener = firebase.auth().onAuthStateChanged((user) => {
+	      if (user) {
+	      } else {
+	        // No user is signed in.
+			window.location.href = "../sign-in";
+	      }
+	    });
+	}
+
 	componentDidUpdate() {
 	    componentHandler.upgradeDom();
 	}
@@ -44,6 +67,7 @@ class UpdateRankings extends React.Component {
 		// order by ranking
 		var filteredPlayers = [];
 		// level filter
+		console.log(this.state.players);
 		if (this.props.rankingsLevelSelected != "none") {
 			this.state.players.map( (obj) => {
 				if (obj.level === this.props.rankingsLevelSelected) {
@@ -130,7 +154,7 @@ class UpdateRankings extends React.Component {
         })  
 
 	    return (
-			<div className="mw9 center update-rankings">
+			<div className={"mw9 center update-rankings " + this.props.className}>
 				<h2 className="tc f3 fw3 bg-white o-90 forrest-green">Update Rankings</h2>
 
 				<PillsRankings />

@@ -72,6 +72,7 @@ export class NavBar extends React.Component {
 	    return (
 			<div itemScope itemType="http://schema.org/LocalBusiness" className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 			  <Header />
+			  
 			  <div className="mdl-layout__drawer">
 				  <header className="mdl-layout__drawer-header">
 				    <div className="mdl-layout__header-row">
@@ -80,14 +81,50 @@ export class NavBar extends React.Component {
 						  </div>
 				    </div>
 				  </header>
-			    <nav className="mdl-navigation">
-			    	  <Link to={"/"}    onClick={() => this.hideDrawer()} className="pv3 tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80 ">Home</Link>
-			    	  <Link to={"/about-us"}  onClick={() => this.hideDrawer()} className="pv3 tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80 ">About Us</Link>
-					      <Link to={"/programs"}    onClick={() => this.hideDrawer()} className="pv3 tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80 ">Programs</Link>
-			          <Link to={"/tournaments"} onClick={() => this.hideDrawer()} className="pv3 tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80 ">Tournaments</Link>
-						  	<Link to={"/rankings"}    onClick={() => this.hideDrawer()} className="pv3 tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80 ">Rankings</Link>
-			          <Link to={"/gallery"}     onClick={() => this.hideDrawer()} className="pv3 tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80 ">Gallery</Link>
-			    </nav>
+			    <div className="cf">
+			    	  <Link to={"/"}    onClick={() => this.hideDrawer()} className="no-underline">
+				    	  <h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
+							<i className="material-icons dib v-mid lh-copy pr2">home</i>
+	    					<span className="dib v-mid lh-copy">Home</span>
+	    				  </h2>
+			    	  </Link>
+			    	  <Link to={"/about-us"}  onClick={() => this.hideDrawer()} className="no-underline">
+			    	  	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
+			    	  		<i className="material-icons dib v-mid lh-copy pr2">info</i>
+	    					<span className="dib v-mid lh-copy">About Us</span>
+			    	  	</h2>
+			    	  </Link>
+					  <Link to={"/programs"}    onClick={() => this.hideDrawer()} className="no-underline">
+					  	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
+					  		<i className="material-icons dib v-mid lh-copy pr2">people</i>
+	    					<span className="dib v-mid lh-copy">Programs</span>
+					  	</h2>
+					  </Link>
+			          <Link to={"/tournaments"} onClick={() => this.hideDrawer()} className="no-underline">
+			          	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
+							<i className="fa fa-trophy dib v-mid lh-copy pr2"></i>
+	    					<span className="dib v-mid lh-copy">Tournaments</span>
+			          	</h2>
+			          </Link>
+					  <Link to={"/rankings"}    onClick={() => this.hideDrawer()} className="no-underline">
+					  	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
+					  		<i className="material-icons dib v-mid lh-copy pr2">trending_up</i>
+	    					<span className="dib v-mid lh-copy">Rankings</span>
+					  	</h2>
+					  </Link>
+					  <Link to={"/strategies"}    onClick={() => this.hideDrawer()} className="no-underline">
+					  	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
+					  		<i className="material-icons dib v-mid lh-copy pr2">lightbulb_outline</i>
+	    					<span className="dib v-mid lh-copy">Strategies</span>
+					  	</h2>
+					  </Link>
+			          <Link to={"/gallery"}     onClick={() => this.hideDrawer()} className="no-underline">
+			          	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
+			          		<i className="material-icons dib v-mid lh-copy pr2">photo_camera</i>
+	    					<span className="dib v-mid lh-copy">Gallery</span>
+			          	</h2>
+			          </Link>
+			    </div>
 			  </div>
 
 			  <main className="mdl-layout__content">

@@ -58,7 +58,7 @@ export class Home extends React.Component {
 
 				<div className="home-tournaments bg-near-white cf pa5-ns dt-l">
 					<div className="dtc-l v-mid-l ph0-l ph5 pt3 pt0-ns fn-l fl">
-						<img src={"../images/lolita1_resize1.jpg"} className="fl w-100 shadow-5-ns" />
+						<img src={"../images/ivanita-resize.jpg"} className="fl w-100 shadow-5-ns" />
 					</div>
 					<div className="home-tournaments-overlay dtc-l v-mid-l pl5-l fn-l fl ph3">
 						<h1 className="f1-ns f2 lh-solid tc tl-l fw3 mt0-l pa0 prim-text">Tournaments</h1>

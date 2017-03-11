@@ -19,6 +19,7 @@ export class Header extends React.Component {
 			      	<Link to={"/programs"}   className="mdl-navigation__link">Programs</Link>
 			        <Link to={"/tournaments"} className="mdl-navigation__link">Tournaments</Link>
 					<Link to={"/rankings"}    className="mdl-navigation__link">Rankings</Link>
+					<Link to={"/strategies"}    className="mdl-navigation__link">Strategies</Link>
 			        <Link to={"/gallery"}     className="mdl-navigation__link">Gallery</Link>
 			      </nav>
 			    </div>
