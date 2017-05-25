@@ -230,8 +230,22 @@ h2 {
 	padding-top: 0px;
 }
 
+.mdl-layout__drawer-button {
+	margin-top: 2px !important;
+	margin-bottom: 2px !important;
+}
+
 .mdl-layout__header {
 	background-color: #003300;
+	position: fixed;
+}
+
+.mdl-layout__header-row .mdl-navigation {
+	height: 50px;
+}
+
+.mdl-layout__header-row .mdl-navigation__link {
+	line-height: 50px;
 }
 
 .mdl-layout-title {
@@ -328,15 +342,23 @@ h2 {
 .mdl-layout__content {
     display: block;
     overflow: visible;
-    margin-top: 64px;
+    margin-top: 102px;
 }
 
 .is-small-screen .mdl-layout__content {
     margin-top: 56px;
 }
-.mdl-layout__header {
-    position: fixed;
+.mdl-layout__header-row {
+    height: 50px;
 }
 .mdl-layout__obfuscator {
     position: fixed;
+}
+
+#header-row {
+	margin-top: 2px;
+}
+
+#header-row2 {
+	padding-left: 40px;
 }

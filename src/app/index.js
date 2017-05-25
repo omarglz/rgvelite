@@ -11,10 +11,12 @@ import { About } from './components/About.js';
 import { SignIn } from './components/SignIn.js';
 import { Strategies } from './components/Strategies.js';
 import { Admin } from './components/Admin.js';
+import { Summer } from './components/Summer.js';
 import Tournaments from './containers/Tournaments.js';
 import Rankings from './containers/Rankings.js';
 import UpdateRankings from './containers/UpdateRankings.js';
 import UpdateTournaments from './containers/UpdateTournaments.js';
+import UpdateGallery from './containers/UpdateGallery.js';
 
 render (
     <Provider store={store}>
@@ -22,6 +24,7 @@ render (
     		<Route path={"/"} component={Root}>
     			<IndexRoute component={Home} />
                 <Route path={"home"} component={Home} />
+                <Route path={"summer-camp"} component={Summer} />
     		   	<Route path={"programs"} component={Programs} />
     			<Route path={"tournaments"} component={Tournaments} />
     			<Route path={"gallery"} component={Gallery} />
@@ -32,7 +35,7 @@ render (
                 <Route path={"admin"} component={Admin} />
                 <Route path={"admin-rankings"} component={UpdateRankings} />
                 <Route path={"admin-tournaments"} component={UpdateTournaments} />
-                <Route path={"admin-gallery"} component={UpdateRankings} />         
+                <Route path={"admin-gallery"} component={UpdateGallery} />         
     		</Route>
     	</Router>
     </Provider>,

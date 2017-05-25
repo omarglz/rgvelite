@@ -67,7 +67,6 @@ class UpdateRankings extends React.Component {
 		// order by ranking
 		var filteredPlayers = [];
 		// level filter
-		console.log(this.state.players);
 		if (this.props.rankingsLevelSelected != "none") {
 			this.state.players.map( (obj) => {
 				if (obj.level === this.props.rankingsLevelSelected) {

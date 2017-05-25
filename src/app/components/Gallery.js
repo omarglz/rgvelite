@@ -26,7 +26,7 @@ export class Gallery extends React.Component {
         var half = Math.floor((tempUrls.length)/2);
         this.setState({
           galleryCol1Urls: tempUrls.splice(0,half),
-          galleryCol2Urls: tempUrls.splice(0,half),
+          galleryCol2Urls: tempUrls.splice(0)
         });
     });
   }
