@@ -100,12 +100,12 @@ export class NavBar extends React.Component {
 	    					<span className="dib v-mid lh-copy">Programs</span>
 					  	</h2>
 					  </Link>
-					  <Link to={"/summer-camp"} onClick={() => this.hideDrawer()} className="no-underline">
+					  {/*<Link to={"/summer-camp"} onClick={() => this.hideDrawer()} className="no-underline">
 			          	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
 							<i className="fa fa-sun-o dib v-mid lh-copy pr2"></i>
 	    					<span className="dib v-mid lh-copy">Summer Camp</span>
 			          	</h2>
-			          </Link>
+			          </Link>*/}
 			          <Link to={"/tournaments"} onClick={() => this.hideDrawer()} className="no-underline">
 			          	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
 							<i className="fa fa-trophy dib v-mid lh-copy pr2"></i>

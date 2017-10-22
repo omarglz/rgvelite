@@ -93,10 +93,10 @@ export class Programs extends React.Component {
 					    </div>
 					    <div className="dt w-100 mt1">
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-m mv0 sec-text">Monday - Friday:</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 sec-text">Monday - Friday:</h1>
 					      </div>
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-m mv0 tr sec-text">5:30pm - 7:10pm</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">5:30pm - 7:10pm</h1>
 					      </div>
 					    </div>
 
@@ -105,16 +105,16 @@ export class Programs extends React.Component {
 					    </div>
 					    <div className="dt w-100 mt1">
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-m mv0 sec-text">2 days a week:</h1>
-							<h1 className="f6-small f5 f4-m mv0 sec-text">3 days a week:</h1>
-					        <h1 className="f6-small f5 f4-m mv0 sec-text">4 days a week:</h1>
-					        <h1 className="f6-small f5 f4-m mv0 sec-text">5 days a week:</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 sec-text">2 days a week:</h1>
+							<h1 className="f6-small f5 f4-ns mv0 sec-text">3 days a week:</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 sec-text">4 days a week:</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 sec-text">5 days a week:</h1>
 					      </div>
 					      <div className="dtc center">
-							<h1 className="f6-small f5 f4-m mv0 tr sec-text">$120 per month</h1>
-					        <h1 className="f6-small f5 f4-m mv0 tr sec-text">$180 per month</h1>
-					        <h1 className="f6-small f5 f4-m mv0 tr sec-text">$240 per month</h1>
-							<h1 className="f6-small f5 f4-m mv0 tr sec-text">$280 per month</h1>
+							<h1 className="f6-small f5 f4-ns mv0 tr sec-text">$120 per month</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">$180 per month</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">$240 per month</h1>
+							<h1 className="f6-small f5 f4-ns mv0 tr sec-text">$280 per month</h1>
 					      </div>
 					    </div>
 
@@ -146,12 +146,12 @@ export class Programs extends React.Component {
 					    </div>
 					    <div className="dt w-100 mt1">
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-m mv0 sec-text">Monday - Thursday:</h1>
-					        <h1 className="f6-small f5 f4-m mv0 sec-text">Friday:</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 sec-text">Monday - Thursday:</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 sec-text">Friday:</h1>
 					      </div>
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-m mv0 tr sec-text">6:45pm - 8:45pm</h1>
-					        <h1 className="f6-small f5 f4-m mv0 tr sec-text">5:30pm - 7:10pm</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">6:45pm - 8:45pm</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">5:30pm - 7:10pm</h1>
 					      </div>
 					    </div>
 
@@ -160,7 +160,7 @@ export class Programs extends React.Component {
 					    </div>
 					    <div className="dt w-100 mt1">
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-m mv0 sec-text">$320 per month</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 sec-text">$320 per month</h1>
 					      </div>
 					    </div>
 					  </div>
@@ -192,10 +192,10 @@ export class Programs extends React.Component {
 					    </div>
 					    <div className="dt w-100 mt1">
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-m mv0 sec-text">Monday - Friday:</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 sec-text">Monday - Friday:</h1>
 					      </div>
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-m mv0 tr sec-text">8:00am - 12:00noon</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">8:00am - 12:00noon</h1>
 					      </div>
 					    </div>
 
@@ -204,7 +204,7 @@ export class Programs extends React.Component {
 					    </div>
 					    <div className="dt w-100 mt1">
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-m mv0 sec-text">$40 per hour</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 sec-text">$40 per hour</h1>
 					      </div>
 					    </div>
 					  </div>
@@ -217,10 +217,10 @@ export class Programs extends React.Component {
 					    </div>
 					    <div className="dt w-100 mt1">
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-m mv0 sec-text">Saturday - Sunday:</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 sec-text">Saturday - Sunday:</h1>
 					      </div>
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-m mv0 tr sec-text">8:00am - 12:00noon</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">8:00am - 12:00noon</h1>
 					      </div>
 					    </div>
 
@@ -229,13 +229,13 @@ export class Programs extends React.Component {
 					    </div>
 					    <div className="dt w-100 mt1">
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-m mv0 sec-text">$40 per hour</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 sec-text">$40 per hour</h1>
 					      </div>
 					    </div>
 					  </div>
 					  <div className="pt4 ph4 mw6 mw7-ns center">
 					  	<div className="dib fl w-100 tc">
-				        	<h1 className="f6-small f5 f4-m mv0 prim-text">
+				        	<h1 className="f6-small f5 f4-ns mv0 prim-text">
 				        		<span style={{color: "red"}}>**</span> - Hours depend on availability. 
 				        		Contact us to schedule your private lesson.
 				        	</h1>

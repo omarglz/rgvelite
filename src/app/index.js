@@ -11,7 +11,6 @@ import { About } from './components/About.js';
 import { SignIn } from './components/SignIn.js';
 import { Strategies } from './components/Strategies.js';
 import { Admin } from './components/Admin.js';
-import { Summer } from './components/Summer.js';
 import Tournaments from './containers/Tournaments.js';
 import Rankings from './containers/Rankings.js';
 import UpdateRankings from './containers/UpdateRankings.js';
@@ -24,7 +23,6 @@ render (
     		<Route path={"/"} component={Root}>
     			<IndexRoute component={Home} />
                 <Route path={"home"} component={Home} />
-                <Route path={"summer-camp"} component={Summer} />
     		   	<Route path={"programs"} component={Programs} />
     			<Route path={"tournaments"} component={Tournaments} />
     			<Route path={"gallery"} component={Gallery} />

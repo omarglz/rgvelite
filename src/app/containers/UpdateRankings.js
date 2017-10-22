@@ -124,27 +124,16 @@ class UpdateRankings extends React.Component {
 						  <option>{notCurrentAge[6]}</option>
 						</select>
 					</div>
-					<div className="change-date pb2">
-						<h2 className="fw3 f5 lh-copy dib pr3">
-							Calculated Date (MM/DD/YYYY)
-							<span className="flex">
-								<input type="text" id={obj.name + " currMonth"} defaultValue={currDate[0]}/>
-								/
-								<input type="text" id={obj.name + " currDay"} defaultValue={currDate[1]}/>
-								/
-								<input type="text" id={obj.name + " currYear"} defaultValue={currDate[2]}/>
-							</span>
-						</h2>
-					</div>
 					<div className="save-changes">
-						<a onClick={() => this.write(obj.name, 
+						<a onClick={() => 
+							this.write(obj.name, 
 								document.getElementById(obj.name + " level").value, 
 								document.getElementById(obj.name + " rank").value, 
-								document.getElementById(obj.name + " age").value, 
-								document.getElementById(obj.name + " currMonth").value + "/" + document.getElementById(obj.name + " currDay").value + "/" + document.getElementById(obj.name + " currYear").value
+								document.getElementById(obj.name + " age").value,
+								document.getElementById("calc-date").value.split("-")[1]+"/"+document.getElementById("calc-date").value.split("-")[2]+"/"+document.getElementById("calc-date").value.split("-")[0]
 							)} 
 							className="green pointer link dim br-pill">
-								Save
+							Save
 						</a>
 					</div>
 				</li>
@@ -157,7 +146,9 @@ class UpdateRankings extends React.Component {
 				<h2 className="tc f3 fw3 bg-white o-90 forrest-green">Update Rankings</h2>
 
 				<PillsRankings />
-
+				<div className="tc center">
+					Calculated Date <input type="date" id="calc-date"/>
+				</div>
 				<div className="ph4 pb4 pt0">
 			    	<ul className="list pl0 measure center">
 			    		{playersList}
