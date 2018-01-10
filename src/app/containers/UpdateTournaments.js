@@ -12,23 +12,6 @@ class UpdateTournaments extends React.Component {
 		};
 	} 
 
-	// 809703717
-	//  city: 
-	// "Austin, TX"
-	//  date: 
-	// "07/21/17"
-	//  id: 
-	//  level: 
-	//  link: 
-	
-	//  month: 
-	// 7
-	//  name: 
-	// "Horseshoe Bay Resort Red Clay Classic Junior Op..."
-	//  sign up: 
-	// "07/09/17"
-
-
 	// write(name, level, rank, age, date) {
 	// 	const division = level + " " + age;
 	// 	var database = firebaseApp.database();
