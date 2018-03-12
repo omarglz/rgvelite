@@ -9,20 +9,20 @@ h2 {
 }
 
 @media (max-width: 340px) {
-  .header-font-small { font-size: 18px; } 
+  .header-font-small { font-size: 18px; }
 }
 
 @media (max-width: 315px) {
-  .f5-small { font-size: 1rem; } 
-  .f6-small { font-size: .875rem; } 
+  .f5-small { font-size: 1rem; }
+  .f6-small { font-size: .875rem; }
 }
 
 @media (max-width: 550px) {
-  .f5-contact { font-size: 1rem; } 
+  .f5-contact { font-size: 1rem; }
 }
 
 @media (max-width: 362px) {
-  .pad-small { padding-left: 31px; } 
+  .pad-small { padding-left: 31px; }
 }
 
 @media (min-width: 900px) {
@@ -94,20 +94,20 @@ h2 {
 }
 
 .home-title {
-	background: 
+	background:
     linear-gradient(
-      rgba(0, 0, 0, 0.25), 
+      rgba(0, 0, 0, 0.25),
       rgba(0, 0, 0, 0.25)
     ),
 	url('./images/titlePic-editweb.jpg') center no-repeat;
 	background-size: cover;
-} 
+}
 
 .home-programs {
-	background: 
+	background:
     linear-gradient(
 		to bottom,
-		rgba(0, 0, 0, 0.45), 
+		rgba(0, 0, 0, 0.45),
 		rgba(0, 0, 0, 0.45),
 		rgba(0, 0, 0, 0.00),
 		rgba(0, 0, 0, 0.00)
@@ -121,8 +121,8 @@ h2 {
 	color: #FF4081;
 }
 
-.hover-hot-pink:hover { 
-	color: #FF4081; 
+.hover-hot-pink:hover {
+	color: #FF4081;
 }
 
 .hover-orange-custom:hover {
@@ -281,14 +281,19 @@ h2 {
 	font-weight: 300;
 }
 
+.prim-text-bold {
+	color: #414141;
+	font-weight: 400;
+}
+
 .programs-section {
 	overflow:scroll !important;
 }
 
 .programs-title {
-	background: 
+	background:
     linear-gradient(
-      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)
     ),
 	url('./images/elite4-editweb.jpg') center no-repeat;
@@ -297,9 +302,9 @@ h2 {
 
 .rankings-section {
 	overflow:scroll !important;
-	background: 
+	background:
     linear-gradient(
-      rgba(0, 0, 0, 0.40), 
+      rgba(0, 0, 0, 0.40),
       rgba(0, 0, 0, 0.40)
     ),
 	url('./images/tennis-ball-editweb.jpg') center no-repeat;
@@ -313,21 +318,21 @@ h2 {
 
 .scroll-component {
 	position: fixed;
-	bottom: 50px; 
-	right: 30px; 
-	cursor: pointer; 
+	bottom: 50px;
+	right: 30px;
+	cursor: pointer;
 	transition: opacity 0.2s linear 0s, visibility;
-	opacity: 0; 
+	opacity: 0;
 	visibility: visible;
 	z-index: 500;
 }
 
 .tournaments-section {
 	overflow:scroll !important;
-	background: 
+	background:
 	linear-gradient(
-      rgba(0, 0, 0, 0.9), 
-      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.1),
       rgba(0, 0, 0, 0.1)
 	),
 	url('./images/tennis-court-editweb.jpg') center no-repeat;
