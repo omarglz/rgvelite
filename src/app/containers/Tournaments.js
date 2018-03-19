@@ -3,19 +3,20 @@ import PillsTournaments from './PillsTournaments.js';
 import { connect } from 'react-redux';
 import firebaseApp from '../firebase.js';
 
-class Tournaments extends React.Component {	
+class Tournaments extends React.Component {
 	constructor() {
 		super();
 		this.state = {
 			tournaments: []
 		};
-	} 
+	}
+
 	componentDidMount() {
 		// read all tournaments from firebase
 		var dummyList = [];
 		var database = firebaseApp.database();
-		var tournamentsRef = database.ref().child('test');
-		tournamentsRef.orderByChild("month").on("child_added", snap => {
+		var tournamentsRef = database.ref().child('tournaments');
+		tournamentsRef.orderByChild("date").on("child_added", snap => {
 			dummyList.push(snap.val());
 			this.setState({
 				tournaments: dummyList
@@ -68,36 +69,45 @@ class Tournaments extends React.Component {
 
 		const tournList = filteredTournaments.map( (obj) => {
 			return (
-				<tr key={obj.id}>
-					<td className="pa3 bb b--light-silver">{obj.level}</td>
-					<td className="pa3 bb b--light-silver">{obj.name}</td>
-					<td className="pa3 bb b--light-silver">{obj.city}</td>
-					<td className="pa3 bb b--light-silver">{obj.date}</td>
-					<td className="pa3 red bb b--light-silver">{obj["sign up"]}</td>
-					<td className="pa3 bb b--light-silver">
-						<a target="_blank" className="db blue underline link" href={obj.link}>link to tournament</a>			
-					</td>		
+				<tr className="dt-row-ns db pv3 pv0-ns bb b--light-silver" key={obj.id}>
+						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db i fs-normal-ns">{obj.name}</td>
+						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
+							<span className="fw6 dn-ns">Level: </span>{obj.level}
+						</td>
+						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
+							<span className="fw6 dn-ns">City: </span>{obj.city}
+						</td>
+						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db date-background">
+							<span className="fw6 dn-ns">Date: </span>{obj.date}
+						</td>
+						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db deadline-background">
+							<span className="fw6 dn-ns">Deadline: </span>
+							<span className="red">{obj["sign up"]}</span>
+						</td>
+						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
+							<a target="_blank" className="db blue underline link" href={obj.link}>link to tournament</a>
+						</td>
 				</tr>
 			);
-        })  
+        })
 
 	    return (
 			<div id={"top"} className="mw9 center tournaments-section">
 				<h2 className="tc f3 fw3 bg-white o-90 forrest-green">Tournaments 2018</h2>
-				
+
 				<PillsTournaments />
-				
+
 				<div className="ph4 pb4 pt0 relative">
 				  <div className="overflow-auto shadow-3 bg-tournaments-table br2 mw7 hcustom center">
-				    <table className="f6 mw8 center" cellSpacing="0">
-				      <thead>
-				    	<tr>
-				          <th className="bb fw6 tl pa3">Level</th>
-				          <th className="bb fw6 tl pa3">Name</th>
-				          <th className="bb fw6 tl pa3">City</th>
-				          <th className="bb fw6 tl pa3">Date</th>
-				          <th className="bb fw6 tl pa3">Deadline</th>
-						  <th className="bb fw6 tl pa3">Link</th>
+				    <table className="f6 w-100" cellSpacing="0">
+				      <thead className="table-box-shadow table-header-custom">
+				    		<tr className="dt-row-ns db pv3 pv0-ns">
+									<th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Name</th>
+				          <th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Level</th>
+				          <th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">City</th>
+				          <th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Date</th>
+				          <th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Deadline</th>
+						  		<th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Link</th>
 				        </tr>
 				      </thead>
 				      <tbody className="lh-copy">
@@ -122,5 +132,3 @@ const mapStateToProps = (state) => {
 
 
 export default connect(mapStateToProps)(Tournaments);
-
-

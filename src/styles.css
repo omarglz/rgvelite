@@ -29,6 +29,12 @@ h2 {
   .right-3-l { right: 4rem; }
 }
 
+@media screen and (min-width: 30em) {
+	.table-header-custom {
+		display: table-header-group !important;
+	}
+}
+
 .about-us-bold {
 	color: #414141;
 	font-weight: 400;
@@ -87,6 +93,14 @@ h2 {
 
 #drawer-icon {
 	padding-left: 0;
+}
+
+.date-background {
+	background-color: #19a97478;
+}
+
+.deadline-background {
+	background-color: #e0b4b499;
 }
 
 .hcustom {
@@ -327,6 +341,14 @@ h2 {
 	z-index: 500;
 }
 
+.table-box-shadow {
+	box-shadow: 0 -1px 0 0 #555555 inset!important;
+}
+
+.table-header-custom {
+	display: none;
+}
+
 .tournaments-section {
 	overflow:scroll !important;
 	background:
@@ -367,3 +389,9 @@ h2 {
 #header-row2 {
 	padding-left: 40px;
 }
+
+/* Media Queries
+	--breakpoint-not-small screen and (min-width: 30em);
+	--breakpoint-medium screen and (min-width: 30em) and (max-width: 60em);
+	--breakpoint-large screen and (min-width: 60em);
+*/

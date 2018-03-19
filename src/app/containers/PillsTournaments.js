@@ -37,18 +37,18 @@ class PillsTournaments extends React.Component {
 			  <div className="fl w-100 tc pb3">
 			  	<ul className="list ph3 ph5-ns tc mb0">
 			  	  <li className="dib mr2"><button onClick={() => this.props.clickAllButton()} className={this.props.monthButtonsState.allButton}>All Months</button></li>
-				  <li className="dib mr2"><button onClick={() => this.props.clickJanButton()} className={this.props.monthButtonsState.janButton}>Jan.</button></li>
-				  <li className="dib mr2"><button onClick={() => this.props.clickFebButton()} className={this.props.monthButtonsState.febButton}>Feb.</button></li>
-				  <li className="dib mr2"><button onClick={() => this.props.clickMarButton()} className={this.props.monthButtonsState.marButton}>Mar.</button></li>
-				  <li className="dib mr2"><button onClick={() => this.props.clickAprButton()} className={this.props.monthButtonsState.aprButton}>Apr.</button></li>
+				  <li className="dib mr2"><button onClick={() => this.props.clickJanButton()} className={this.props.monthButtonsState.janButton}>Jan</button></li>
+				  <li className="dib mr2"><button onClick={() => this.props.clickFebButton()} className={this.props.monthButtonsState.febButton}>Feb</button></li>
+				  <li className="dib mr2"><button onClick={() => this.props.clickMarButton()} className={this.props.monthButtonsState.marButton}>Mar</button></li>
+				  <li className="dib mr2"><button onClick={() => this.props.clickAprButton()} className={this.props.monthButtonsState.aprButton}>Apr</button></li>
 				  <li className="dib mr2"><button onClick={() => this.props.clickMayButton()} className={this.props.monthButtonsState.mayButton}>May</button></li>
 				  <li className="dib mr2"><button onClick={() => this.props.clickJuneButton()} className={this.props.monthButtonsState.juneButton}>June</button></li>
 				  <li className="dib mr2"><button onClick={() => this.props.clickJulyButton()} className={this.props.monthButtonsState.julyButton}>July</button></li>
-				  <li className="dib mr2"><button onClick={() => this.props.clickAugButton()} className={this.props.monthButtonsState.augButton}>Aug.</button></li>
-				  <li className="dib mr2"><button onClick={() => this.props.clickSepButton()} className={this.props.monthButtonsState.sepButton}>Sep.</button></li>
-				  <li className="dib mr2"><button onClick={() => this.props.clickOctButton()} className={this.props.monthButtonsState.octButton}>Oct.</button></li>
-				  <li className="dib mr2"><button onClick={() => this.props.clickNovButton()} className={this.props.monthButtonsState.novButton}>Nov.</button></li>
-				  <li className="dib mr2"><button onClick={() => this.props.clickDecButton()} className={this.props.monthButtonsState.decButton}>Dec.</button></li>
+				  <li className="dib mr2"><button onClick={() => this.props.clickAugButton()} className={this.props.monthButtonsState.augButton}>Aug</button></li>
+				  <li className="dib mr2"><button onClick={() => this.props.clickSepButton()} className={this.props.monthButtonsState.sepButton}>Sep</button></li>
+				  <li className="dib mr2"><button onClick={() => this.props.clickOctButton()} className={this.props.monthButtonsState.octButton}>Oct</button></li>
+				  <li className="dib mr2"><button onClick={() => this.props.clickNovButton()} className={this.props.monthButtonsState.novButton}>Nov</button></li>
+				  <li className="dib mr2"><button onClick={() => this.props.clickDecButton()} className={this.props.monthButtonsState.decButton}>Dec</button></li>
 				</ul>
 			  </div>
 
