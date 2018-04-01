@@ -9,7 +9,7 @@ class Rankings extends React.Component {
 		this.state = {
 			players: []
 		};
-	} 
+	}
 	componentDidMount() {
 		// read all rankings from firebase
 		var dummyList = [];
@@ -41,20 +41,26 @@ class Rankings extends React.Component {
 			})
 		}
 
-		
+
 		const playersList = filteredPlayers.map( (obj) => {
 			return (
-				<tr key={obj.name}>
-					<td className="pa3 bb">{obj.name}</td>
-					<td className="pa3 bb">{obj.division}</td>
-					<td className="pa3 bb">{obj["rank position"]}</td>
-					<td className="pa3 bb">{obj["as of"]}</td>
-					<td className="pa3 bb">
-						<a target="_blank" className="db link-rankings underline link" href={obj.info}>more info</a>			
-					</td>		
+				<tr className="dt-row-ns db pv3 pv0-ns bb b--light-silver" key={obj.name}>
+					<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db i fs-normal-ns ranking-name-background">{obj.name}</td>
+					<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
+						<span className="fw6 dn-ns">Division: </span>{obj.division}
+					</td>
+					<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db date-background">
+						<span className="fw6 dn-ns">Rank Position: </span>{obj["rank position"]}
+					</td>
+					<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
+						<span className="fw6 dn-ns">Calculated Date: </span>{obj["as of"]}
+					</td>
+					<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
+						<a target="_blank" className="db link-rankings underline link" href={obj.info}>more info</a>
+					</td>
 				</tr>
 			);
-        })  
+        })
 
 	    return (
 			<div id={"top"} className="mw9 center rankings-section">
@@ -62,15 +68,15 @@ class Rankings extends React.Component {
 
 				<PillsRankings />
 
-				<div className="ph4 pb4 pt0">
+				<div className="ph4 pb4 pt0 relative">
 				  <div className="overflow-auto shadow-3 bg-rankings-table br2 mw7 hcustom center">
-				    <table className="f6 mw8 center" cellSpacing="0">
-				      <thead>
-				        <tr>
-				          <th className="bb fw6 tl pa3">Name</th>
-				          <th className="bb fw6 tl pa3">Division</th>
-				          <th className="bb fw6 tl pa3">Rank Position</th>
-				          <th className="bb fw6 tl pa3">Calculated Date</th>
+				    <table className="f6 w-100" cellSpacing="0">
+				      <thead className="table-box-shadow table-header-custom">
+				        <tr className="dt-row-ns db pv3 pv0-ns">
+				          <th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Name</th>
+				          <th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Division</th>
+				          <th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Rank Position</th>
+				          <th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Calculated Date</th>
 				        </tr>
 				      </thead>
 				      <tbody className="lh-copy">
@@ -93,4 +99,3 @@ const mapStateToProps = (state) => {
 
 
 export default connect(mapStateToProps)(Rankings);
-

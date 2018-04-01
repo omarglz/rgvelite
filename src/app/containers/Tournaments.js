@@ -70,7 +70,7 @@ class Tournaments extends React.Component {
 		const tournList = filteredTournaments.map( (obj) => {
 			return (
 				<tr className="dt-row-ns db pv3 pv0-ns bb b--light-silver" key={obj.id}>
-						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db i fs-normal-ns">{obj.name}</td>
+						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db i fs-normal-ns tourn-name-background">{obj.name}</td>
 						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
 							<span className="fw6 dn-ns">Level: </span>{obj.level}
 						</td>

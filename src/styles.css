@@ -99,8 +99,16 @@ h2 {
 	background-color: #19a97478;
 }
 
+.tourn-name-background {
+	background-color: #CEC7D3;
+}
+
 .deadline-background {
 	background-color: #e0b4b499;
+}
+
+.ranking-name-background {
+	background-color: #b9b2a0ba;
 }
 
 .hcustom {
