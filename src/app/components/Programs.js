@@ -93,7 +93,7 @@ export class Programs extends React.Component {
 				        <h1 className="f6-small f5 f4-ns mv0 sec-text">Monday - Thursday:</h1>
 				      </div>
 				      <div className="dtc center">
-				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">5:45pm - 7:10pm</h1>
+				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">5:45pm - 7:15pm</h1>
 				      </div>
 				    </div>
 
