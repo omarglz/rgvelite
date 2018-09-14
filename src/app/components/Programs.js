@@ -46,7 +46,7 @@ export class Programs extends React.Component {
 				        <h1 className="f6-small f5 f4-ns mv0 sec-text">Monday - Thursday:</h1>
 				      </div>
 				      <div className="dtc center">
-				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">4:40pm - 5:40pm</h1>
+				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">4:45pm - 5:45pm</h1>
 				      </div>
 				    </div>
 				    <div className="dtc center pt3">
@@ -93,7 +93,7 @@ export class Programs extends React.Component {
 				        <h1 className="f6-small f5 f4-ns mv0 sec-text">Monday - Friday:</h1>
 				      </div>
 				      <div className="dtc center">
-				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">5:30pm - 7:10pm</h1>
+				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">5:45pm - 7:10pm</h1>
 				      </div>
 				    </div>
 
@@ -105,13 +105,11 @@ export class Programs extends React.Component {
 				        <h1 className="f6-small f5 f4-ns mv0 sec-text">2 days a week:</h1>
 						<h1 className="f6-small f5 f4-ns mv0 sec-text">3 days a week:</h1>
 				        <h1 className="f6-small f5 f4-ns mv0 sec-text">4 days a week:</h1>
-				        <h1 className="f6-small f5 f4-ns mv0 sec-text">5 days a week:</h1>
 				      </div>
 				      <div className="dtc center">
 						<h1 className="f6-small f5 f4-ns mv0 tr sec-text">$120 per month</h1>
 				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">$180 per month</h1>
 				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">$240 per month</h1>
-						<h1 className="f6-small f5 f4-ns mv0 tr sec-text">$280 per month</h1>
 				      </div>
 				    </div>
 				  </div>
@@ -141,11 +139,9 @@ export class Programs extends React.Component {
 					    <div className="dt w-100 mt1">
 					      <div className="dtc center">
 					        <h1 className="f6-small f5 f4-ns mv0 sec-text">Monday - Thursday:</h1>
-					        <h1 className="f6-small f5 f4-ns mv0 sec-text">Friday:</h1>
 					      </div>
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">6:45pm - 8:45pm</h1>
-					        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">5:30pm - 7:10pm</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">7:00pm - 8:45pm</h1>
 					      </div>
 					    </div>
 
