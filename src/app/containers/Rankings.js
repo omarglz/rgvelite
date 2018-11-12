@@ -7,73 +7,50 @@ class Rankings extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			players: []
+			players: [],
+			filteredPlayers: []
 		};
 	}
 
 	componentDidMount() {
 		// read all rankings from firebase
 		var dummyList = [];
-
+		var tempPlayers = [];
 		var database = firebaseApp.database();
 		var rankingsRef = database.ref('rankings/');
 		rankingsRef.orderByChild("rank position").on("child_added", snap => {
-		  dummyList.push(snap.val());
-		});
-
-		console.log("before", typeof(dummyList));
-
-		for (var obj in dummyList) {
-			
-		}
-
-		// dummyList.forEach(obj => {console.log(obj)});
-
-		// var filteredList = dummyList.filter( obj => {
-		// 	console.log(obj.level);
-		// 	return (obj.level == this.props.rankingsLevelSelected);
-		// });
-
-		// console.log("after: ", filteredList);
-
-		this.setState({
-			players: dummyList 
+			dummyList.push(snap.val());
+			if (snap.val().level === this.props.rankingsLevelSelected) {
+				tempPlayers.push(snap.val());
+			}
+			this.setState({
+				players: dummyList,
+				filteredPlayers: tempPlayers
+			});
 		});
 	}
 
-	// componentWillReceiveProps(nextProps) {
-	// 	// filter by ranking level
-	// 	var tempPlayers = [];
-	// 	if (nextProps.rankingsLevelSelected != "none") {
-	// 		this.state.players.map( (obj) => {
-	// 			if (obj.level === nextProps.rankingsLevelSelected) {
-	// 				tempPlayers.push(obj);
-	// 			}
-	// 		})
-	// 	}
+	componentWillReceiveProps(nextProps) {
+		this.setFilteredPlayers(nextProps);
+	}
 
-	// 	this.setState({
-	// 		filteredPlayers: tempPlayers
-	// 	});
-	// }
+	setFilteredPlayers = (incomingProps) => {
+		// filter by ranking level
+		var tempPlayers = [];
+		if (incomingProps.rankingsLevelSelected != "none") {
+			this.state.players.map( (obj) => {
+				if (obj.level === incomingProps.rankingsLevelSelected) {
+					tempPlayers.push(obj);
+				}
+			})
+		}
 
-	// setFilteredPlayers(incomingProps) {
-	// 	var tempPlayers = [];
-	// 	if (incomingProps.rankingsLevelSelected != "none") {
-	// 		this.state.players.map( (obj) => {
-	// 			if (obj.level === incomingProps.rankingsLevelSelected) {
-	// 				tempPlayers.push(obj);
-	// 			}
-	// 		})
-	// 	}
+		this.setState({
+			filteredPlayers: tempPlayers
+		});
+	}
 
-	// 	this.setState({
-	// 		filteredPlayers: tempPlayers
-	// 	});
-	// }
-
-	renderFilteredPlayers() {
-		console.log("this.state.filteredPlayers", this.state.players);
+	renderFilteredPlayers = () => {
 		const playersList = this.state.filteredPlayers.map( (obj) => {
 			return (
 				<tr className="dt-row-ns db pv3 pv0-ns bb b--light-silver" key={obj.name}>
@@ -98,7 +75,6 @@ class Rankings extends React.Component {
 	}
 
 	render() {
-		console.log("rendering rankings page", this.state.players);
 		return (
 			<div id={"top"} className="mw9 center rankings-section">
 				<h2 className="tc f3 fw3 bg-white o-90 forrest-green">Rankings</h2>
@@ -117,7 +93,7 @@ class Rankings extends React.Component {
 								</tr>
 							</thead>
 							<tbody className="lh-copy">
-								{/* this.renderFilteredPlayers() */}
+								{ this.renderFilteredPlayers() }
 							</tbody>
 						</table>
 					</div>
