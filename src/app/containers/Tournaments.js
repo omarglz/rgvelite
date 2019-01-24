@@ -2,6 +2,7 @@ import React from 'react';
 import PillsTournaments from './PillsTournaments.js';
 import { connect } from 'react-redux';
 import firebaseApp from '../firebase.js';
+var _ = require('lodash');
 
 class Tournaments extends React.Component {
 	constructor() {
@@ -13,15 +14,19 @@ class Tournaments extends React.Component {
 
 	componentDidMount() {
 		// read all tournaments from firebase
-		var dummyList = [];
 		var database = firebaseApp.database();
 		var tournamentsRef = database.ref().child('tournaments');
-		tournamentsRef.orderByChild("date").on("child_added", snap => {
-			dummyList.push(snap.val());
-			this.setState({
-				tournaments: dummyList
+		tournamentsRef.once("value")
+		.then((snapshot) => {
+			const wholeObj = snapshot.val();
+			const vals = _.values(wholeObj);
+			vals.sort((a, b) => {
+				const aa = a.date.split('/');
+				const bb = b.date.split('/');
+				return aa[0] - bb[0] || aa[1] - bb[1];
 			});
-		});
+			this.setState({ tournaments: vals });
+		})
 	}
 
 	componentDidUpdate() {
@@ -67,33 +72,38 @@ class Tournaments extends React.Component {
 			})
 		}
 
-		const tournList = filteredTournaments.map( (obj) => {
-			return (
-				<tr className="dt-row-ns db pv3 pv0-ns bb b--light-silver" key={obj.id}>
-						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db i fs-normal-ns tourn-name-background">{obj.name}</td>
-						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
-							<span className="fw6 dn-ns">Level: </span>{obj.level}
-						</td>
-						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
-							<span className="fw6 dn-ns">City: </span>{obj.city}
-						</td>
-						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db date-background">
-							<span className="fw6 dn-ns">Date: </span>{obj.date}
-						</td>
-						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db deadline-background">
-							<span className="fw6 dn-ns">Deadline: </span>
-							<span className="red">{obj["sign up"]}</span>
-						</td>
-						<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
-							<a target="_blank" className="db blue underline link" href={obj.link}>link to tournament</a>
-						</td>
-				</tr>
-			);
-        })
+		const tournList = filteredTournaments.map( (obj) => (
+			<tr className="dt-row-ns db pv3 pv0-ns bb b--light-silver" key={obj.id}>
+					<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db i fs-normal-ns tourn-name-background">{obj.name}</td>
+					<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
+						<span className="fw6 dn-ns">Level: </span>{obj.level}
+					</td>
+					<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
+						<span className="fw6 dn-ns">City: </span>{obj.city}
+					</td>
+					<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db date-background">
+						<span className="fw6 dn-ns">Date: </span>{obj.date}
+					</td>
+					<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db deadline-background">
+						<span className="fw6 dn-ns">Deadline: </span>
+						<span className="red">{obj["sign up"]}</span>
+					</td>
+					<td className="pa3-ns pv1 ph3 bb-ns b--light-silver dtc-ns db">
+						<a target="_blank" className="dib blue underline v-mid link" href={obj.link}>link to tournament</a>
+						{ !_.isNil(obj.travel) && <i className="material-icons v-mid forrest-green dib pl2">star</i> }
+					</td>
+			</tr>
+		));
 
 	    return (
 			<div id={"top"} className="mw9 center tournaments-section">
-				<h2 className="tc f3 fw3 bg-white o-90 forrest-green">Tournaments 2019</h2>
+				<div className="bg-white o-90 tc">
+					<h2 className="f3 fw3 forrest-green">Tournaments 2019</h2>
+					<div className="">
+						<i className="material-icons forrest-green v-mid">star</i>
+						<span className="f6 fw3 forrest-green v-mid">-- tournaments RGV Elite will travel to</span>
+					</div>
+				</div>
 
 				<PillsTournaments />
 
