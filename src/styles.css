@@ -48,6 +48,13 @@ h2 {
 	box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .4 );
 }
 
+.gallery-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: start;
+}
+
 .footer-gray {
 	color: #9e9e9e;
 }
@@ -116,13 +123,22 @@ h2 {
 }
 
 .home-title {
-	background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.25)
-    ),
-	url('./images/titlePic-editweb.jpg') center no-repeat;
-	background-size: cover;
+	/* url('./images/titlePic-editweb.jpg') center no-repeat; */
+	/* background-size: cover; */
+	opacity: 0.99;
+	position: relative;
+	overflow: hidden;
+}
+
+.home-video {
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	opacity: 0.77;
 }
 
 .home-programs {

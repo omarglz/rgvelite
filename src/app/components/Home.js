@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { isMobile } from 'react-device-detect';
 
 export class Home extends React.Component {
 	componentDidUpdate() {
@@ -12,14 +13,23 @@ export class Home extends React.Component {
 
 
 				<div className="home-title bg-dark-gray">
+					{
+						isMobile ? <img className="home-video" src="https://firebasestorage.googleapis.com/v0/b/rgv-elite.appspot.com/o/gifs%2Fdrone_overhead_low_gif.gif?alt=media&token=b23e2c60-3f8e-4b96-a4bd-2104c9ad7a18" />
+						: 
+						<video autoPlay loop muted playsInline className="home-video">
+							<source src="https://firebasestorage.googleapis.com/v0/b/rgv-elite.appspot.com/o/videos%2Fdrone_overhead.MP4?alt=media&token=d68458c2-9a19-4864-8f7f-5cb9d0859d6d"
+								type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					}
 					<div className="home-title-overlay pa5 pa6-ns">
-						<h1 className="db f-headline lh-solid tc fw3 mt0 pa0 white">RGV Elite</h1>
+						<h1 className="db f1 lh-solid tc fw3 mt0 pa0 white mb3">RGV Elite</h1>
 						<h1 className="f3 lh-solid tc fw3 mv0 pa0 white">Tennis Academy</h1>
 					</div>
 				</div>
 
 
-				<div className="home-about bg-near-white cf pa3 pa5-ns dt-l">
+				<div className="home-about bg-near-white cf pa4 pa5-ns dt-l">
 					<div className="home-about-overlay pr5-l dtc-l v-mid-l">
 						<h1 className="db f1-ns f2 lh-solid tc tl-l fw3 mt2 pa0 prim-text">Forming excellent athletes and even better people</h1>
 						<h1 className="f3-ns f4 fw3 tc tl-l sec-text">
@@ -55,32 +65,30 @@ export class Home extends React.Component {
 					</div>
 				</div>
 
-
-				<div className="home-tournaments bg-near-white cf pa5-ns dt-l">
-					<div className="dtc-l v-mid-l ph0-l ph5 pt3 pt0-ns fn-l fl">
-						<img src={"../images/challenger090917.jpg"} className="fl w-100 shadow-5-ns" />
-					</div>
-					<div className="home-tournaments-overlay dtc-l v-mid-l pl5-l fn-l fl ph3">
-						<h1 className="f1-ns f2 lh-solid tc tl-l fw3 mt0-l pa0 prim-text">Tournaments</h1>
+				<div className="home-tournaments bg-near-white cf pa4 pa5-ns dt-l">
+					<div className="home-about-overlay pr5-l dtc-l v-mid-l">
+						<h1 className="db f1-ns f2 lh-solid tc tl-l fw3 mt2 pa0 prim-text">Tournaments</h1>
 						<h1 className="f3-ns f4 fw3 tc tl-l sec-text">
 							We encourage our players to measure their skills by competing in tournaments.
 							It's the best way to know how much they have improved.
 						</h1>
 						<article className="cf">
-						  <div className="fl w-100 w-50-ns tc tl-l pb3 pb0-ns">
-						  	<Link to={"/tournaments"} className="custom-link mdl-typography--text-uppercase">
-								FIND TOURNAMENTS 
-								<i className="material-icons">chevron_right</i>
-							</Link>
-						  </div>
-
-						  <div className="fl w-100 w-50-ns tc tl-l pb4 pb0-ns">
-						  	<Link to={"/rankings"} className="custom-link mdl-typography--text-uppercase">
-								FIND RANKINGS
-								<i className="material-icons">chevron_right</i>
-							</Link>
-						  </div>
+							<div className="fl w-100 w-50-ns tc tl-l mb0 pb3 pb0-l">
+								<Link to={"/tournaments"} className="custom-link mdl-typography--text-uppercase">
+									FIND TOURNAMENTS 
+									<i className="material-icons">chevron_right</i>
+								</Link>
+							</div>
+							<div className="fl w-100 w-50-ns tc tl-l mb0 pb4 pb0-l">
+								<Link to={"/rankings"} className="custom-link mdl-typography--text-uppercase">
+									FIND RANKINGS
+									<i className="material-icons">chevron_right</i>
+								</Link>
+							</div>
 						</article>
+					</div>
+					<div className="dtc-l v-mid-l">
+						<img itemProp="image" src={"../images/challenger090917.jpg"} className="fl w-100 shadow-5-ns" />
 					</div>
 				</div>
 
