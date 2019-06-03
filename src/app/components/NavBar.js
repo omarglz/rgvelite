@@ -91,7 +91,7 @@ export class NavBar extends React.Component {
 			    	  <Link to={"/about-us"}  onClick={() => this.hideDrawer()} className="no-underline">
 			    	  	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
 			    	  		<i className="material-icons dib v-mid lh-copy pr2">info</i>
-	    					<span className="dib v-mid lh-copy">About Us</span>
+	    						<span className="dib v-mid lh-copy">About Us</span>
 			    	  	</h2>
 			    	  </Link>
 					  <Link to={"/programs"}    onClick={() => this.hideDrawer()} className="no-underline">
@@ -100,18 +100,18 @@ export class NavBar extends React.Component {
 	    					<span className="dib v-mid lh-copy">Programs</span>
 					  	</h2>
 					  </Link>
-					  {/*<Link to={"/summer-camp"} onClick={() => this.hideDrawer()} className="no-underline">
-			          	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
-							<i className="fa fa-sun-o dib v-mid lh-copy pr2"></i>
-	    					<span className="dib v-mid lh-copy">Summer Camp</span>
-			          	</h2>
-			          </Link>*/}
-			          <Link to={"/tournaments"} onClick={() => this.hideDrawer()} className="no-underline">
-			          	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
-							<i className="fa fa-trophy dib v-mid lh-copy pr2"></i>
-	    					<span className="dib v-mid lh-copy">Tournaments</span>
-			          	</h2>
-			          </Link>
+					  <Link to={"/summer-camp"} onClick={() => this.hideDrawer()} className="no-underline">
+							<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
+								<i className="fa fa-sun-o dib v-mid lh-copy pr2"></i>
+								<span className="dib v-mid lh-copy">Summer Camp</span>
+							</h2>
+						</Link>
+						<Link to={"/tournaments"} onClick={() => this.hideDrawer()} className="no-underline">
+							<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
+								<i className="fa fa-trophy dib v-mid lh-copy pr2"></i>
+								<span className="dib v-mid lh-copy">Tournaments</span>
+							</h2>
+						</Link>
 					  <Link to={"/rankings"}    onClick={() => this.hideDrawer()} className="no-underline">
 					  	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
 					  		<i className="material-icons dib v-mid lh-copy pr2">trending_up</i>
@@ -124,12 +124,12 @@ export class NavBar extends React.Component {
 	    					<span className="dib v-mid lh-copy">Strategies</span>
 					  	</h2>
 					  </Link>
-			          <Link to={"/gallery"}     onClick={() => this.hideDrawer()} className="no-underline">
-			          	<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
-			          		<i className="material-icons dib v-mid lh-copy pr2">photo_camera</i>
-	    					<span className="dib v-mid lh-copy">Gallery</span>
-			          	</h2>
-			          </Link>
+						<Link to={"/gallery"}     onClick={() => this.hideDrawer()} className="no-underline">
+							<h2 className="tc f3 fw4 link forrest-green no-underline bg-animate hover-bg-white-80">
+								<i className="material-icons dib v-mid lh-copy pr2">photo_camera</i>
+								<span className="dib v-mid lh-copy">Gallery</span>
+							</h2>
+						</Link>
 			    </div>
 			  </div>
 

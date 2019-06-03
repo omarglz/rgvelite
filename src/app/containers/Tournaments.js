@@ -105,26 +105,28 @@ class Tournaments extends React.Component {
 					</div>
 				</div>
 
-				<PillsTournaments />
+				<div className="flex-l">
+					<PillsTournaments />
 
-				<div className="ph4 pb4 pt0 relative">
-				  <div className="overflow-auto shadow-3 bg-tournaments-table br2 mw7 hcustom center">
-				    <table className="f6 w-100" cellSpacing="0">
-				      <thead className="table-box-shadow table-header-custom">
-				    		<tr className="dt-row-ns db pv3 pv0-ns">
-									<th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Name</th>
-				          <th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Level</th>
-				          <th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">City</th>
-				          <th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Date</th>
-				          <th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Deadline</th>
-						  		<th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Link</th>
-				        </tr>
-				      </thead>
-				      <tbody className="lh-copy">
-						{ tournList }
-				      </tbody>
-				    </table>
-				  </div>
+					<div className="ph4 pv4 relative center">
+						<div className="overflow-auto shadow-3 bg-tournaments-table br2 mw7 hcustom center">
+							<table className="f6 w-100" cellSpacing="0">
+								<thead className="table-box-shadow table-header-custom">
+									<tr className="dt-row-ns db pv3 pv0-ns">
+										<th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Name</th>
+										<th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Level</th>
+										<th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">City</th>
+										<th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Date</th>
+										<th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Deadline</th>
+										<th className="fw6 tl pa3-ns pv1 ph3 dtc-ns db">Link</th>
+									</tr>
+								</thead>
+								<tbody className="lh-copy">
+							{ tournList }
+								</tbody>
+							</table>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

@@ -24,8 +24,8 @@ import { clickDecButton } from '../actions/tournamentsMonthActions.js';
 class PillsTournaments extends React.Component {
 	render() {
 	    return (
-	    	<article className="cf">
-			  <div className="fl w-100 tc pv3">
+	    	<article className="cf w-33-l">
+			  <div className="fl w-100 tc pb3 pt4">
 			  	<ul className="list ph3 ph5-ns tc mb0">
 				  <li className="dib mr2"><button onClick={() => this.props.tClickChallenger1DayButton()}  className={this.props.buttonsState.challenger1DayBtn}>Challenger 1-Day</button></li>
 				  <li className="dib mr2"><button onClick={() => this.props.tClickChallenger2DayButton()}  className={this.props.buttonsState.challenger2DayBtn}>Challenger 2-Day</button></li>
