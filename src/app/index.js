@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from './store.js';
 import { Home } from './components/Home.js';
 import { Programs } from './components/Programs.js';
-import { Summer } from './components/Summer.js';
+// import { Summer } from './components/Summer.js';
 import { Root } from './components/Root.js';
 import { Gallery } from './components/Gallery.js';
 import { About } from './components/About.js';
@@ -25,7 +25,7 @@ render (
     			<IndexRoute component={Home} />
                 <Route path={"home"} component={Home} />
     		   	<Route path={"programs"} component={Programs} />
-                <Route path={"summer-camp"} component={Summer} />
+                {/* <Route path={"summer-camp"} component={Summer} /> */}
     			<Route path={"tournaments"} component={Tournaments} />
     			<Route path={"gallery"} component={Gallery} />
     			<Route path={"rankings"} component={Rankings} />

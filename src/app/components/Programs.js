@@ -46,7 +46,7 @@ export class Programs extends React.Component {
 				        <h1 className="f6-small f5 f4-ns mv0 sec-text">Monday - Thursday:</h1>
 				      </div>
 				      <div className="dtc center">
-				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">4:45pm - 5:45pm</h1>
+				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">5:00pm - 6:00pm</h1>
 				      </div>
 				    </div>
 				    <div className="dtc center pt3">
@@ -93,7 +93,7 @@ export class Programs extends React.Component {
 				        <h1 className="f6-small f5 f4-ns mv0 sec-text">Monday - Thursday:</h1>
 				      </div>
 				      <div className="dtc center">
-				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">5:45pm - 7:15pm</h1>
+				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">6:00pm - 7:30pm</h1>
 				      </div>
 				    </div>
 
@@ -141,18 +141,25 @@ export class Programs extends React.Component {
 					        <h1 className="f6-small f5 f4-ns mv0 sec-text">Monday - Thursday:</h1>
 					      </div>
 					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">7:00pm - 8:45pm</h1>
+					        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">7:15pm - 9:00pm</h1>
 					      </div>
 					    </div>
 
 					    <div className="dtc center pt3">
 					        <h1 className="f5-small f4 mv0 prim-text">Cost</h1>
 					    </div>
-					    <div className="dt w-100 mt1">
-					      <div className="dtc center">
-					        <h1 className="f6-small f5 f4-ns mv0 sec-text">$320 per month</h1>
-					      </div>
-					    </div>
+							<div className="dt w-100 mt1">
+				      <div className="dtc center">
+				        <h1 className="f6-small f5 f4-ns mv0 sec-text">2 days a week:</h1>
+						<h1 className="f6-small f5 f4-ns mv0 sec-text">3 days a week:</h1>
+				        <h1 className="f6-small f5 f4-ns mv0 sec-text">4 days a week:</h1>
+				      </div>
+				      <div className="dtc center">
+						<h1 className="f6-small f5 f4-ns mv0 tr sec-text">$210 per month</h1>
+				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">$250 per month</h1>
+				        <h1 className="f6-small f5 f4-ns mv0 tr sec-text">$320 per month</h1>
+				      </div>
+				    </div>
 					  </div>
 				</div>
 			  </div>
