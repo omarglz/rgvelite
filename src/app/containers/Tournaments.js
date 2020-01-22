@@ -98,7 +98,7 @@ class Tournaments extends React.Component {
 	    return (
 			<div id={"top"} className="mw9 center tournaments-section">
 				<div className="bg-white o-90 tc">
-					<h2 className="f3 fw3 forrest-green">Tournaments 2019</h2>
+					<h2 className="f3 fw3 forrest-green">Tournaments 2020</h2>
 					<div className="">
 						<i className="material-icons forrest-green v-mid">star</i>
 						<span className="f6 fw3 forrest-green v-mid">-- tournaments RGV Elite will travel to</span>

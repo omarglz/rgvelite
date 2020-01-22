@@ -141,7 +141,7 @@ export class NavBar extends React.Component {
 			    <footer className="mdl-mini-footer">
 				  <div className="ph2-ns">
 				    <div className="dtc pt2 fn-l fl w-auto-l w-100">
-				      <h2 className="f4 fw3">© 2019 RGV Elite Tennis Academy</h2>
+				      <h2 className="f4 fw3">© 2020 RGV Elite Tennis Academy</h2>
 				    </div>
 
 				    { footer_contact }

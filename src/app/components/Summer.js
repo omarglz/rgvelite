@@ -6,7 +6,7 @@ export class Summer extends React.Component {
 	    	<div className="summer-camp">
 	    		<div className="summer-camp-title bg-white">
 					<div className="summer-camp-title-overlay ph5-ns ph4 ph6-l pv4">
-						<h1 className="db f1-ns f2 lh-solid tc fw3 mt0 pa0 prim-text">Summer Camp 2019</h1>
+						<h1 className="db f1-ns f2 lh-solid tc fw3 mt0 pa0 prim-text">Summer Camp 2020</h1>
 						<p className="f3-ns f4 fw3 prim-text tc">	
 							In our twelve-week summer camp, we offer training sessions twice a day for any skill level. Have a look at all of our options below!
 							Contact us if you have any questions. There is limited enrollment. 
